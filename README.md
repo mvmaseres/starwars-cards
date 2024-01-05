@@ -1,7 +1,7 @@
 # StarWars -   Guessing Game
 ##  Description
 Welcome to our StarWars card game, where players can dive into the exciting Star Wars universe and test their knowledge. 
-The game offers several guessing options, allowing users to choose from StarWars characters, planets, movies, races and even starships.
+The game offers several guessing options, allowing users to choose from StarWars characters, planets, movies, species and even starships.
 
 ## Features
 The game features three difficulty modes:
