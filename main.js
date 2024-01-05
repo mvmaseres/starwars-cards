@@ -1,0 +1,7 @@
+const apiUrl = 'https://swapi.dev/api/'
+const filmsUrl = 'films/'
+const peopleUrl = 'people/'
+const planetsUrl = 'planets/'
+const speciesUrl = 'species/'
+const starshipsUrl = 'starships/'
+const vechiclesUrl = 'vehicles/'
