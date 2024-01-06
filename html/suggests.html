@@ -10,27 +10,24 @@
 </head>
 <body>
     <!-- menu of navegation -->
-    <header>
+    <header id="header">
     </header>
     <main>
+        <h1>Send your comments</h1>
+        <form method="post" enctype="multipart/form-data" id="suggests">
+            <fieldset>
+                <img src="../assets/darkvader.png" alt="darth vader" width="25%">
+                <div>
+                    <p><label>How will you evaluate the game? <input type="text" name="evaluation"></label></p>
+                    <p><label>What will you change? <input type="text" name="changes"></label></p>
+                    <p>Other comments</p>
+                    <button id="suggest-form">Send</button>
+                </div>
+                <img src="../assets/lukeskywalker.png" alt="luke skywalker" width="20%">
+            </fieldset>
+        </form>
     </main>
-    <footer>
+    <footer id="footer">
     </footer>
-    <template id="template-nav">
-        <a href="home.html"><img src="../assets/titlestarwars.png" alt="StarWars" width="6%"></a>
-        <nav>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="game.html">Game</a></li>
-                <li><a href="collection.html">Collections</a></li>
-                <li><a href="login.html">Log in / Sign in</a></li>
-            </ul>
-        </nav>
-    </template>
-    <template id="template-footer">
-        <div>
-            <p>Created by Valentina Maseres  ©2024</p>
-        </div>
-    </template>
 </body>
 </html>
