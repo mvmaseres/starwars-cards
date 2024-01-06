@@ -23,3 +23,77 @@
 .star-like {
     background-image: url(../assets/bb-8-like.png);
 }
+
+/* Accordion styles */
+
+#category-accordion {
+    margin: 1.2em auto;
+    width: 90%;
+}
+
+#category-accordion ul{
+    display: flex;
+    flex-direction: row; /* Asegúrate de que los elementos estén en una fila */
+    width: 100%; /* Establece el ancho total del acordeón */
+    overflow: hidden;
+}
+
+#category-accordion li {
+    list-style: none;
+    width: 16%; /* unchecked 10%, checked 40% */
+    height: 18rem;
+    margin-bottom: 1em;
+    padding: 10px;
+    border-radius: 4px;   
+    cursor: pointer;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    flex: 1; /* Todos los elementos ocuparán el mismo espacio inicialmente */
+}
+
+#film-category{
+    background-image: url(https://sm.ign.com/t/ign_nordic/lists/r/ranking-th/ranking-the-star-wars-movies-from-worst-to-best_2vtt.1200.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#character-category{
+    background-image: url(https://images.bauerhosting.com/legacy/empire-images/features/560ebc7b50e6c513721c309f/Ben%20Kenobi.jpg?ar=16%3A9&fit=crop&crop=top&auto=format&w=undefined&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#planet-category{
+    background-image: url(https://www.denofgeek.com/wp-content/uploads/2021/04/star-wars-bespin-cloud-city.jpg?resize=1024,577);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#specie-category{
+    background-image: url(https://www.denofgeek.com/wp-content/uploads/2019/12/Jabba-the-Hutt-in-Star-Wars.jpeg?fit=1200%2C675);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#starship-category{
+    background-image: url(https://www.cnet.com/a/img/resize/ff32644af8398591a22d88f8c2e569c7c0d88bb4/hub/2020/01/09/f79a9662-35a4-4676-bbf6-b71a223e0a5c/ship-tie-razor-crest.jpg?auto=webp&fit=crop&height=675&width=1200);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#vehicle-category{
+    background-image: url(https://lumiere-a.akamaihd.net/v1/images/Which-Star-Wars-Vehicle-is-Meant-For-You-AT-AT_e1161c77.jpeg?region=56%2C0%2C888%2C500);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+#category-accordion li label {
+    font-size: 18px;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+}
+
+/* #category-accordion input[type="radio"] {
+    display: none;
+} */
+
+

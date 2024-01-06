@@ -1,3 +1,15 @@
+/* GAME - SCREEN */
+/* if we do click to game-category, it will be selected */
+const li = document.querySelectorAll('#category-accordion li')
+
+li.forEach(item =>{
+    item.addEventListener('click', function() {
+        this.querySelector('input[type="radio"]').click()
+    })
+})
+
+
+
 /* Bring the API */
 const apiUrl = 'https://swapi.dev/api/'
 const filmsUrl = 'films/'
