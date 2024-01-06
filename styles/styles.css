@@ -1,0 +1,18 @@
+.star-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.stars{
+    background-image: url(../assets/bb-8.png);
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.star-like {
+    background-image: url(../assets/bb-8-like.png);
+}

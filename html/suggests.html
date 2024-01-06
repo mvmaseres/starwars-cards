@@ -18,9 +18,24 @@
             <fieldset>
                 <img src="../assets/darkvader.png" alt="darth vader" width="25%">
                 <div>
-                    <p><label>How will you evaluate the game? <input type="text" name="evaluation"></label></p>
-                    <p><label>What will you change? <input type="text" name="changes"></label></p>
-                    <p>Other comments</p>
+                    <div>
+                        <label>How will you evaluate the game?</label>
+                        <div class="star-container">
+                            <div id="star-1" class="stars"></div>
+                            <div id="star-2" class="stars"></div>
+                            <div id="star-3" class="stars"></div>
+                            <div id="star-4" class="stars"></div>
+                            <div id="star-5" class="stars"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="evaluation">What will you change?</label><br>
+                        <textarea name="evaluation" id="evaluation" cols="50%" rows="5"></textarea>
+                    </div>
+                    <div>
+                        <label for="comments">Other comments</label><br>
+                        <textarea name="comments" id="comments" cols="50%" rows="10"></textarea>
+                    </div>
                     <button id="suggest-form">Send</button>
                 </div>
                 <img src="../assets/lukeskywalker.png" alt="luke skywalker" width="20%">
