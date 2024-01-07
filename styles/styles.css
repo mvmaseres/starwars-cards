@@ -2,12 +2,28 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: white;
+}
+
+html {
+    background-image: url(https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixlib=rb-4.0.3);
+    background-size: contain;
+}
+
+main {
+    font-size: 1.5rem;
 }
 
 /* HOME, HEADER AND FOOTER */
+/* HEADER */
+/* LOGO */
 .header {
     display: flex;
     width: 100%;
+    font-size: 2rem;
+    font-weight: bolder;
+    color: white;
+    margin-top: 1rem;
 }
 
 .logo {
@@ -15,19 +31,30 @@
     display: flex;
     justify-content: center;
     margin-right: 10rem;
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
 }
 
 .header a img {
     max-width: 100%;
 }
 
+/* NAV */
+/* PARENT */
 .header nav {
     flex: 0 0 80%;
+    display: flex;
+    align-items: center; /* Vertical */
+    justify-content: center; /* Horizontal */
 }
 
+/* CHILDREN */
 .header ul {
     display: flex;
     justify-content: space-around;
+    width: 100%; /* use all the space*/
+    padding: 0;
+    margin: 0;
 }
 
 .header li {
@@ -36,7 +63,68 @@
 
 .header li a {
     text-decoration: none;
+    color: inherit;
+    cursor: pointer;
 } 
+
+/* MAIN */
+/* IMAGE HEADER */
+#img-header {
+    margin-top: 3rem;
+    margin-bottom: 2.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+#img-header img {
+    border-radius: 3rem;
+    border-color: white;
+    border-style: solid;
+    border-width: 1px;    
+}
+
+/* SECTIONS HEADER */
+/* PARENT */
+.home-divs {
+    margin: 1.5rem;
+    margin-top: 2.5rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+/* CHILDREN */
+/* IMG */
+.img-divs {
+    width: 50%;
+}
+
+.img-divs img {
+    width: 100%;
+    border-radius: 35px;
+}
+
+/* TEXTS */
+.explication-divs {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.explication-divs button {
+    width: 9.5rem;
+    height: 2rem;
+    color: black;
+    border-radius: 16px;
+    margin-top: 0.25rem;
+}
+
+.explication-divs h1 {
+    margin-bottom: 0.5rem;
+}
+
 
 /* Send your comments */
 .star-container {
@@ -167,7 +255,7 @@
 
 #category-difficulty li {
     list-style: none;
-    height: 10rem;
+    height: 20rem;
     width: 30%;
     margin-bottom: 1em;
     padding: 10px;
