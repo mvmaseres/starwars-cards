@@ -1,17 +1,34 @@
 /* GAME - SCREEN */
-/* if we do click to game-category, it will be selected */
-const li = document.querySelectorAll('#category-accordion li')
+/* if we do click to elements from choose-category, it will be selected */
+const liCategory = document.querySelectorAll('#category-accordion li')
 
-li.forEach(item =>{
+liCategory.forEach(item =>{
     item.addEventListener('click', function() {
         
-        li.forEach(elem => {
+        liCategory.forEach(elem => {
             const radio = elem.querySelector('input[type="radio"]')
             elem.style.width = radio.checked ? '40%' : '15%' // Si está marcado, 20%, sino 10%
             elem.style.borderColor = radio.checked ? '#fff' : 'black'
-        });
+        })
         
-        // Luego, marca el input seleccionado
+        // select the element
+        this.querySelector('input[type="radio"]').click()
+    })
+})
+
+/* if we do click to elements from choose-difficulty, it will be selected */
+const liDifficulty = document.querySelectorAll('#category-difficulty li')
+console.log(liDifficulty)
+
+liDifficulty.forEach(item => {
+    item.addEventListener('click', function() {
+
+        liDifficulty.forEach(elem => {
+            const radio = elem.querySelector('input[type="radio"]')
+            elem.style.borderColor = radio.checked ? '#fff' : 'black'
+        })
+
+        // select the element
         this.querySelector('input[type="radio"]').click()
     })
 })
