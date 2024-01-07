@@ -40,6 +40,7 @@
 #category-accordion li {
     list-style: none;
     height: 20rem;
+    width: 15%;
     margin-bottom: 1em;
     padding: 10px;
     border-radius: 10px;   

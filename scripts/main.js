@@ -2,10 +2,6 @@
 /* if we do click to game-category, it will be selected */
 const li = document.querySelectorAll('#category-accordion li')
 
-li.forEach (item => {
-    item.style.width = '15%'
-})
-
 li.forEach(item =>{
     item.addEventListener('click', function() {
         
