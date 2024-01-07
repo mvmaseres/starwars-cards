@@ -4,6 +4,40 @@
     box-sizing: border-box;
 }
 
+/* HOME, HEADER AND FOOTER */
+#header {
+    display: flex;
+    width: 100%;
+}
+
+.logo {
+    width: 7%;
+    display: flex;
+    justify-content: center;
+    margin-right: 10rem;
+}
+
+#header a img {
+    max-width: 100%;
+}
+
+#header nav {
+    flex: 0 0 80%;
+}
+
+#header ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+#header li {
+    list-style: none;
+}
+
+#header li a {
+    text-decoration: none;
+} 
+
 /* Send your comments */
 .star-container {
     display: flex;
