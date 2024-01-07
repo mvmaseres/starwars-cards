@@ -6,16 +6,13 @@ li.forEach (item => {
     item.style.width = '15%'
 })
 
-if (li[0].checked = true) {
-    li[0].style.width = '40%'
-}
-
 li.forEach(item =>{
     item.addEventListener('click', function() {
         
         li.forEach(elem => {
             const radio = elem.querySelector('input[type="radio"]')
             elem.style.width = radio.checked ? '40%' : '15%' // Si está marcado, 20%, sino 10%
+            elem.style.borderColor = radio.checked ? '#fff' : 'black'
         });
         
         // Luego, marca el input seleccionado
