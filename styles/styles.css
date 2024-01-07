@@ -5,7 +5,7 @@
 }
 
 /* HOME, HEADER AND FOOTER */
-#header {
+.header {
     display: flex;
     width: 100%;
 }
@@ -17,24 +17,24 @@
     margin-right: 10rem;
 }
 
-#header a img {
+.header a img {
     max-width: 100%;
 }
 
-#header nav {
+.header nav {
     flex: 0 0 80%;
 }
 
-#header ul {
+.header ul {
     display: flex;
     justify-content: space-around;
 }
 
-#header li {
+.header li {
     list-style: none;
 }
 
-#header li a {
+.header li a {
     text-decoration: none;
 } 
 

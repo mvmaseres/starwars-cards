@@ -10,10 +10,10 @@ async function addHeaderAndFooter() {
     templates.innerHTML = await response.text()
 
     const headerTemplate = templates.content.querySelector('#template-header').content
-    document.querySelector('#header').appendChild(headerTemplate)
+    document.querySelector('.header').appendChild(headerTemplate)
 
     const footerTemplate = templates.content.querySelector('#template-footer').content
-    document.querySelector('#footer').appendChild(footerTemplate)
+    document.querySelector('.footer').appendChild(footerTemplate)
 }
 
 addHeaderAndFooter()
