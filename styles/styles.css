@@ -1,13 +1,23 @@
+/* Color pallete: 
+
+Tricorn black: #2C2B2C
+Extra white: #EDEEE9
+Rookwood dark: #492728
+Bitter chocolate: #50433f
+Denim:#6F8FAF
+
+*/
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: white;
+    color: #EDEEE9;
 }
 
 html {
-    background-image: url(https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixlib=rb-4.0.3);
-    background-size: contain;
+    background-color: #2C2B2C;
 }
 
 main {
@@ -69,19 +79,19 @@ main {
 
 /* MAIN */
 /* IMAGE HEADER */
-#img-header {
-    margin-top: 3rem;
-    margin-bottom: 2.5rem;
-    display: flex;
-    justify-content: center;
-}
+#video-header {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporción 16:9 para el contenedor */
+    margin-top: 1rem;
+  }
 
-#img-header img {
-    border-radius: 3rem;
-    border-color: white;
-    border-style: solid;
-    border-width: 1px;    
-}
+  #video-header iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 
 /* SECTIONS HEADER */
 /* PARENT */
@@ -125,8 +135,7 @@ main {
 .explication-divs h1 {
     margin-bottom: 0.5rem;
 }
-
-
+ 
 /* Send your comments */
 .star-container {
     display: flex;
@@ -179,32 +188,113 @@ main {
     background-image: url(https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/81A736C2B6CC7B7B4A3F2E2381E36542715DFC550F765F49BC0770898DE5F32B/scale?width=1200&aspectRatio=1.78&format=jpeg);
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
 }
+#film-category::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(49, 27, 28, 0.25); /* Color con 50% de opacidad */
+    z-index: 1; /* Asegura que la capa esté encima de la imagen de fondo */
+  }
+
 #character-category{
     background-image: url(https://images.bauerhosting.com/legacy/empire-images/features/560ebc7b50e6c513721c309f/Ben%20Kenobi.jpg?ar=16%3A9&fit=crop&crop=top&auto=format&w=undefined&q=80);
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
 }
+
+#character-category::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(49, 27, 28, 0.30); 
+    z-index: 1; 
+  }
+
+
 #planet-category{
     background-image: url(https://www.denofgeek.com/wp-content/uploads/2021/04/star-wars-bespin-cloud-city.jpg?resize=1024,577);
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
 }
+
+#planet-category::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(49, 27, 28, 0.30); 
+    z-index: 1; 
+}
+
+
 #specie-category{
     background-image: url(https://www.denofgeek.com/wp-content/uploads/2019/12/Jabba-the-Hutt-in-Star-Wars.jpeg?fit=1200%2C675);
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
 }
+
+#specie-category::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(49, 27, 28, 0.30); 
+    z-index: 1; 
+}
+
 #starship-category{
     background-image: url(https://www.cnet.com/a/img/resize/ff32644af8398591a22d88f8c2e569c7c0d88bb4/hub/2020/01/09/f79a9662-35a4-4676-bbf6-b71a223e0a5c/ship-tie-razor-crest.jpg?auto=webp&fit=crop&height=675&width=1200);
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
 }
+
+#starship-category::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(49, 27, 28, 0.30); 
+    z-index: 1; 
+}
+
+
 #vehicle-category{
     background-image: url(https://lumiere-a.akamaihd.net/v1/images/Which-Star-Wars-Vehicle-is-Meant-For-You-AT-AT_e1161c77.jpeg?region=56%2C0%2C888%2C500);
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
 }
+
+#vehicle-category::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(49, 27, 28, 0.30); 
+    z-index: 1; 
+}
+
+
 
 #category-accordion li label {
     font-size: 18px;
@@ -227,18 +317,54 @@ main {
     background-image: url(https://i.pinimg.com/originals/cc/19/82/cc19825a05d7aca4c4c10e3c4947b509.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
+}
+
+#difficulty-easy::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(49, 27, 28, 0.30); 
+    z-index: 1; 
 }
 
 #difficulty-medium {
     background-image: url(https://medialab.news/wp-content/uploads/2022/06/anakin.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
+}
+
+#difficulty-medium::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(49, 27, 28, 0.30); 
+    z-index: 1; 
 }
 
 #difficulty-hard {
     background-image: url(https://lafrikileria.com/blog/wp-content/uploads/2023/05/villanos-star-wars.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
+}
+
+#difficulty-hard::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(49, 27, 28, 0.30); 
+    z-index: 1; 
 }
 
 #category-difficulty {
