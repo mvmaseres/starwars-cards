@@ -123,6 +123,34 @@ main {
     background-color: rgba(0, 0, 0, 0.25);
 }
 
+/* Transition texts */
+.toRight {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.fromLeft {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.toLeft {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+    transition: all 1s;
+}
+
+.fromRight {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+
 .explication-divs button {
     width: 9.5rem;
     height: 2rem;

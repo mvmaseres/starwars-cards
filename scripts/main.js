@@ -1,3 +1,32 @@
+/*HOME SCREEN */
+/*Transition scroll of explication divs*/
+const observerRight = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('fromLeft')
+        } else {
+            entry.target.classList.remove('fromLeft')
+        }
+    })
+})
+
+const observerLeft = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('fromRight')
+        } else {
+            entry.target.classList.remove('fromRight')
+        }
+    })
+})
+
+
+const toRight = document.querySelectorAll('.toRight')
+toRight.forEach((el) => observerRight.observe(el))
+const toLeft = document.querySelectorAll('.toLeft')
+toLeft.forEach((el) => observerLeft.observe(el))
+
+
 /* GAME - SCREEN */
 /* if we do click to elements from choose-category, it will be selected */
 const liCategory = document.querySelectorAll('#category-accordion li')
