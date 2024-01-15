@@ -8,7 +8,6 @@ Denim:#6F8FAF
 
 */
 
-
 * {
     margin: 0;
     padding: 0;
@@ -24,9 +23,9 @@ main {
     font-size: 1.5rem;
 }
 
-/* HOME, HEADER AND FOOTER */
-/* HEADER */
-/* LOGO */
+           /* HOME, HEADER AND FOOTER */
+                /* HEADER */
+                /* LOGO */
 .header {
     display: flex;
     width: 100%;
@@ -49,8 +48,8 @@ main {
     max-width: 100%;
 }
 
-/* NAV */
-/* PARENT */
+                /* NAV */
+                /* PARENT */
 .header nav {
     flex: 0 0 80%;
     display: flex;
@@ -58,7 +57,7 @@ main {
     justify-content: center; /* Horizontal */
 }
 
-/* CHILDREN */
+                /* CHILDREN */
 .header ul {
     display: flex;
     justify-content: space-around;
@@ -77,11 +76,11 @@ main {
     cursor: pointer;
 } 
 
-/* MAIN */
-/* IMAGE HEADER */
+                        /* MAIN */
+                        /* VIDEO HEADER */
 #video-header {
     position: relative;
-    padding-bottom: 56.25%; /* Proporción 16:9 para el contenedor */
+    padding-bottom: 56.25%; /* Proportion 16:9 */
     margin-top: 1rem;
   }
 
@@ -93,8 +92,8 @@ main {
     height: 100%;
   }
 
-/* SECTIONS HEADER */
-/* PARENT */
+                        /* SECTIONS HEADER */
+                        /* PARENT */
 .home-divs {
     margin: 1.5rem;
     margin-top: 2.5rem;
@@ -103,8 +102,8 @@ main {
     font-size: 1.5rem;
 }
 
-/* CHILDREN */
-/* IMG */
+                        /* CHILDREN */
+                        /* IMG */
 .img-divs {
     width: 50%;
 }
@@ -114,7 +113,7 @@ main {
     border-radius: 35px;
 }
 
-/* TEXTS */
+                        /* TEXTS */
 .explication-divs {
     width: 50%;
     display: flex;
@@ -136,7 +135,7 @@ main {
     margin-bottom: 0.5rem;
 }
  
-/* Send your comments */
+                        /* SEND YOUR COMMENTS */
 .star-container {
     display: flex;
     flex-direction: row;
@@ -156,7 +155,8 @@ main {
     background-image: url(../assets/bb-8-like.png);
 }
 
-/* ACCORDION STYLES */
+                        /* GAME */
+                        /* ACCORDION STYLES */
 #category-accordion {
     margin: 1.2em auto;
     width: 90%;
@@ -307,7 +307,7 @@ main {
     display: none;
 }
 
-/* CHOOSE DIFFICULTY */
+                        /* CHOOSE DIFFICULTY */
 
 #category-difficulty input[type="radio"] {
     display: none;
