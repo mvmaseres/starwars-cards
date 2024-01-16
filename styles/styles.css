@@ -1,3 +1,6 @@
+/* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
 /* Color pallete: 
 
 Tricorn black: #2C2B2C
@@ -13,6 +16,7 @@ Denim:#6F8FAF
     padding: 0;
     box-sizing: border-box;
     color: #EDEEE9;
+    font-family: 'Poppins', sans-serif;
 }
 
 html {
@@ -427,3 +431,6 @@ main {
     color: white;
     cursor: pointer;
 }
+
+                        /* LOG IN / SIGN IN SCREEN */
+
