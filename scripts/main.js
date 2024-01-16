@@ -62,6 +62,9 @@ liDifficulty.forEach(item => {
     })
 })
 
+/* LOG IN / SIGN UP */
+
+
 /* Bring the API */
 const apiUrl = 'https://swapi.dev/api/'
 const filmsUrl = 'films/'
