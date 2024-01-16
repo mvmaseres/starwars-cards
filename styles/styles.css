@@ -538,7 +538,7 @@ form a:hover {
 }
 
 .line::before{
-    color: #2C2B2C;
+    color: #6F8FAF;
     content: "Or";
     position: absolute;
     top: 50%;
@@ -612,4 +612,16 @@ a.field.apple {
 a.field.apple span {
     font-weight: 500;
     color: black;
+}
+
+@media screen and (max-width: 800px){
+    .forms{
+        flex-wrap: wrap;
+
+    }
+
+    .form{
+        column-gap: none;
+        margin-bottom: 30px;
+    }
 }
