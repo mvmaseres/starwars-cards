@@ -47,7 +47,6 @@ liCategory.forEach(item =>{
 
 /* if we do click to elements from choose-difficulty, it will be selected */
 const liDifficulty = document.querySelectorAll('#category-difficulty li')
-console.log(liDifficulty)
 
 liDifficulty.forEach(item => {
     item.addEventListener('click', function() {

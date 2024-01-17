@@ -170,6 +170,7 @@ main {
 
 .explication-divs button:hover {
     background-color: #edeee99b;
+    cursor: pointer;
 }
 
 .explication-divs h1 {
