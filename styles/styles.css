@@ -470,13 +470,25 @@ main {
 
                         /* LOG IN / SIGN IN SCREEN */
 
+#login-page{
+    display: flex;
+    flex-direction: column;
+}
+
+#login-page h1{
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+}
+
 .forms {
-    height: 90vh;
+    height: 60%;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     column-gap: 40px;
+    margin-bottom: 3em;
 }
 
 .form {
