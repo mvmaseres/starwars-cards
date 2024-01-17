@@ -13,39 +13,40 @@
     <header class="header">
     </header>
     <main>
-        <h1>Send your comments</h1>
-        <form method="post" enctype="multipart/form-data" id="suggests">
-            <fieldset>
-                <img src="../assets/darkvader.png" alt="darth vader" width="25%">
-                <div>
-                    <div>
-                        <label>How will you evaluate the game?</label>
-                        <div class="star-container">
-                            <div id="star-1" class="stars"></div>
-                            <div id="star-2" class="stars"></div>
-                            <div id="star-3" class="stars"></div>
-                            <div id="star-4" class="stars"></div>
-                            <div id="star-5" class="stars"></div>
+        <section id="suggest-page">
+            <h1>Send your comments</h1>
+            <form method="post" enctype="multipart/form-data" id="suggests">
+                <fieldset>
+                    <div id="questions-suggest">
+                        <div>
+                            <label>How will you evaluate the game?</label>
+                            <div class="star-container">
+                                <div id="star-1" class="stars"></div>
+                                <div id="star-2" class="stars"></div>
+                                <div id="star-3" class="stars"></div>
+                                <div id="star-4" class="stars"></div>
+                                <div id="star-5" class="stars"></div>
+                            </div>
                         </div>
+                        <div>
+                            <label for="evaluation">What will you change?</label><br>
+                            <textarea name="evaluation" id="evaluation" cols="90%" rows="4"></textarea>
+                        </div>
+                        <div>
+                            <label for="comments">Other comments</label><br>
+                            <textarea name="comments" id="comments" cols="90%" rows="10"></textarea>
+                        </div>
+                        <button id="suggest-form">Send</button>
                     </div>
-                    <div>
-                        <label for="evaluation">What will you change?</label><br>
-                        <textarea name="evaluation" id="evaluation" cols="50%" rows="5"></textarea>
-                    </div>
-                    <div>
-                        <label for="comments">Other comments</label><br>
-                        <textarea name="comments" id="comments" cols="50%" rows="10"></textarea>
-                    </div>
-                    <button id="suggest-form">Send</button>
-                </div>
-                <img src="../assets/lukeskywalker.png" alt="luke skywalker" width="20%">
-            </fieldset>
-        </form>
-        <!-- when the form is submitted, this div will appear and the form will disappear. -->
-        <div id="form-posted">
-            <p>Your comments has been send. <br>
-            Thank you</p>
-        </div>
+                    <img src="../assets/lukeskywalker.png" alt="luke skywalker" height="20%">
+                </fieldset>
+            </form>
+            <!-- when the form is submitted, this div will appear and the form will disappear. -->
+            <div id="form-posted">
+                <p class="hide">Your comments has been send. <br>
+                Thank you</p>
+            </div>
+        </section>
     </main>
     <footer class="footer">
     </footer>
