@@ -447,14 +447,16 @@ main {
     max-width: 430px;
     width: 100%;
     padding: 30px;
-    border-radius: 6px;
-    background-color: #EDEEE9;
+    border-radius: 20px;
+    background-image: url(https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixlib=rb-4.0.3);
+    background-size: cover;
+    border: 1px solid #EDEEE9;
 }
 
 .form h1 {
     font-size: 28px;
     font-weight: 600;
-    color: #2C2B2C; 
+    color: #EDEEE9; 
     text-align: center;
 }
 
@@ -544,7 +546,7 @@ form a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #EDEEE9;
+    background-image: url(https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixlib=rb-4.0.3);
     padding: 0 15px;
     font-size: 16px;
 }
@@ -561,7 +563,7 @@ form a:hover {
 }
 
 a.facebook {
-    background-color: #6F8FAF;
+    background-color: #0171d3;
 }
 
 a.facebook .facebook-icon{
