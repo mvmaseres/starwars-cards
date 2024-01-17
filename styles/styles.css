@@ -198,6 +198,32 @@ main {
 }
 
                         /* GAME */
+                        /*TEXT*/
+
+#title-game,
+#choose-category h2,
+.choose-difficulty h2 {
+    margin: 0.25em auto;
+    width: 90%;
+}
+
+#game-rules{
+    margin: 0.5em auto;
+    padding: 1em;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+#game-rules h1,
+#game-rules p {
+    margin-top: 1rem;
+    text-align: justify;
+}
+
+ 
                         /* ACCORDION STYLES */
 #category-accordion {
     margin: 1.2em auto;
