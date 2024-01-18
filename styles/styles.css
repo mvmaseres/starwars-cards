@@ -36,15 +36,17 @@ main {
     font-size: 2rem;
     font-weight: bolder;
     color: white;
-    margin-top: 1rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    background-color: #333; 
 }
 
 .logo {
-    width: 7%;
+    width: 9%;
     display: flex;
     justify-content: center;
-    margin-right: 10rem;
-    margin-left: 0.5rem;
+    margin-right: 8rem;
+    margin-left: 2rem;
     margin-top: 0.5rem;
 }
 
@@ -55,17 +57,17 @@ main {
                 /* NAV */
                 /* PARENT */
 .header nav {
-    flex: 0 0 80%;
+    flex: 0 0 75%;
     display: flex;
-    align-items: center; /* Vertical */
-    justify-content: center; /* Horizontal */
+    align-items: center; 
+    justify-content: center; 
 }
 
                 /* CHILDREN */
 .header ul {
     display: flex;
     justify-content: space-around;
-    width: 100%; /* use all the space*/
+    width: 100%; 
     padding: 0;
     margin: 0;
 }
@@ -85,7 +87,6 @@ main {
 #video-header {
     position: relative;
     padding-bottom: 56.25%; /* Proportion 16:9 */
-    margin-top: 1rem;
   }
 
   #video-header iframe {
@@ -175,6 +176,14 @@ main {
 
 .explication-divs h1 {
     margin-bottom: 0.5rem;
+}
+
+                        /*FOOTER*/
+.footer{
+    background-color: #333; 
+    padding: 10px;
+    text-align: center;
+    font-size: 14px; 
 }
  
                         /* SEND YOUR COMMENTS */
