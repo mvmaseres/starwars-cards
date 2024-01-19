@@ -324,6 +324,15 @@ form#suggests{
     color: #F0DB4F;
 }
 
+#api-info div.content {
+    display: flex;
+}
+
+#api-info img {
+    width: 40%;
+    padding-right: 1rem;
+}
+
 #purpose{
     background-image: url(https://lumiere-a.akamaihd.net/v1/images/star-wars-backgrounds-38_d0dbbfb4.jpeg);
     background-repeat: no-repeat;
