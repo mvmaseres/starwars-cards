@@ -269,7 +269,43 @@ form#suggests{
     align-items: center;
 }
 
+.about-project{
+    height: 40vh;
+}
 
+#purpose{
+    background-image: url(https://lumiere-a.akamaihd.net/v1/images/star-wars-backgrounds-38_d0dbbfb4.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#api-info{
+    background-color: black;
+}
+
+#technologies{
+    background-color: #2C2B2C;
+    height: 10vh;
+}
+
+#challenges{
+    background-image: url(https://ingyen-hatterkep.hu/hatterkepek_nagyfelbontasu/darth-vader-hatterkep-54411.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#improvments{
+    background-image: url(https://cdna.artstation.com/p/assets/images/images/054/220/284/large/alfie-astley-oldfrontendclone.jpg?1664031384);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#acknowledgments{
+    background-image: url(https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixlib=rb-4.0.3);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
                         /* GAME */
                         /*TEXT*/
 
