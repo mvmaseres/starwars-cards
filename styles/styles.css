@@ -333,6 +333,11 @@ form#suggests{
     padding-right: 1rem;
 }
 
+#about-us-page #improvments p,
+#about-us-page #challenges p{
+    width: 60%;
+}
+
 #purpose{
     background-image: url(https://lumiere-a.akamaihd.net/v1/images/star-wars-backgrounds-38_d0dbbfb4.jpeg);
     background-repeat: no-repeat;
