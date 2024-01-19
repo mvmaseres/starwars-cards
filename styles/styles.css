@@ -297,6 +297,33 @@ form#suggests{
     background-color: white;
 }
 
+#technologies{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#technologies div label{
+    padding: 1rem;
+}
+
+#technologies div label i {
+    padding: 0.5rem;
+}
+
+.fa-html5{
+    color: #e34c26;
+}
+
+.fa-css3-alt{
+    color: #264de4;
+}
+
+.fa-js{
+    color: #F0DB4F;
+}
+
 #purpose{
     background-image: url(https://lumiere-a.akamaihd.net/v1/images/star-wars-backgrounds-38_d0dbbfb4.jpeg);
     background-repeat: no-repeat;
@@ -309,7 +336,7 @@ form#suggests{
 
 #technologies{
     background-color: #2C2B2C;
-    height: 10vh;
+    height: 12vh;
 }
 
 #challenges{
