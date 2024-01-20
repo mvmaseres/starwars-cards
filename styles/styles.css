@@ -699,17 +699,15 @@ a.facebook .facebook-icon{
     align-items: center;
     justify-content: center;
     background-color: #fff;
-}
-
-.facebook-icon {
     position: absolute;
     transform: translateX(-500%);
 }
 
 a .google-img {
+    position: absolute;
     height: 20px;
     width: 20px;
-    transform: translateX(-325%);
+    transform: translateX(-700%);
 }
 
 a.field.google {
@@ -723,10 +721,11 @@ a.field.google span {
     color: #232836;
 }
 
-a .apple-img {
-    height: 20px;
-    width: 20px;
-    transform: translateX(-345%);
+.apple img {
+    height: 24px;
+    position: absolute;
+    color: black;
+    transform: translateX(-430%);
 }
 
 a.field.apple {
