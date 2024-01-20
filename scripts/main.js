@@ -1,7 +1,9 @@
 /*HOME SCREEN */
 /*Transition scroll of explication divs*/
+//add event when we observe the intersection of every OberverRight
 const observerRight = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
+    entries.forEach((entry) => {ç
+        //if the object is intersecting
         if (entry.isIntersecting) {
             entry.target.classList.add('fromLeft')
         } else {
@@ -10,8 +12,10 @@ const observerRight = new IntersectionObserver((entries) => {
     })
 })
 
+//add event when we observe the intersection of every OberverLeft
 const observerLeft = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
+         //if the object is intersecting
         if (entry.isIntersecting) {
             entry.target.classList.add('fromRight')
         } else {
@@ -20,9 +24,11 @@ const observerLeft = new IntersectionObserver((entries) => {
     })
 })
 
-
+//if the object that need to go toRight is in the intersection => animation
 const toRight = document.querySelectorAll('.toRight')
 toRight.forEach((el) => observerRight.observe(el))
+
+//if the object that need to go toLeft is in the intersection => animation
 const toLeft = document.querySelectorAll('.toLeft')
 toLeft.forEach((el) => observerLeft.observe(el))
 
@@ -32,11 +38,13 @@ toLeft.forEach((el) => observerLeft.observe(el))
 const liCategory = document.querySelectorAll('#category-accordion li')
 
 liCategory.forEach(item =>{
+    //check if there is a click event in the element
     item.addEventListener('click', function() {
         
         liCategory.forEach(elem => {
             const radio = elem.querySelector('input[type="radio"]')
-            elem.style.width = radio.checked ? '40%' : '15%' // Si está marcado, 20%, sino 10%
+            //if it is checked, some width
+            elem.style.width = radio.checked ? '40%' : '15%'
             elem.style.borderColor = radio.checked ? '#fff' : 'black'
         })
         
@@ -49,10 +57,12 @@ liCategory.forEach(item =>{
 const liDifficulty = document.querySelectorAll('#category-difficulty li')
 
 liDifficulty.forEach(item => {
+    //check if there is a click event in the element
     item.addEventListener('click', function() {
 
         liDifficulty.forEach(elem => {
             const radio = elem.querySelector('input[type="radio"]')
+            //if it is checked, change border color
             elem.style.borderColor = radio.checked ? '#fff' : 'black'
         })
 
@@ -66,15 +76,18 @@ const forms = document.querySelectorAll('.forms')
 const pwShowHide = document.querySelectorAll('.eye-icon')
 
 pwShowHide.forEach(eyeIcon => {
+    //if the eyeicon is clicked
     eyeIcon.addEventListener("click", () => {
         let pwFields = eyeIcon.parentElement.parentElement.querySelectorAll(".password")
 
         pwFields.forEach(password => {
+            //if the field is in mode password show the text
             if(password.type === "password") {
                 password.type = "text"
                 eyeIcon.classList.replace("bx-hidde", "bx-show")
                 return
             }
+            //if it is not selected, change to password mode
             password.type = "password"
             eyeIcon.classList.replace("bx-show", "bx-hidde")
         })
@@ -87,17 +100,22 @@ let rating = 0
 
 function puntuation () {
     const starsContainer = document.querySelector('#suggest-page .star-container')
+    //add event to the container
     starsContainer.addEventListener('click', (event) => clickOnStar(event))
 }
 
 function clickOnStar(event) {
+    //if the star is clicked
    if (event.target === event.currentTarget) return
-   
+    
    const stars = [...document.querySelectorAll('.star')]
+   //remove every star-like img
    stars.forEach((star) => star.classList.remove('star-like'))
 
+   //update the rating to the number of stars clicked
    rating = stars.indexOf(event.target) + 1
 
+   //add the star-like img to the number of stars (from the rating result)
    for ( let i = 0; i < rating; i++) {
     stars[i].classList.add('star-like')
    }
