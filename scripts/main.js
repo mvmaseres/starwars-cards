@@ -1,3 +1,7 @@
+import { addHeaderAndFooter } from './templates.js'
+
+addHeaderAndFooter()
+
 /*HOME SCREEN */
 /*Transition scroll of explication divs*/
 //add event when we observe the intersection of every OberverRight
@@ -50,6 +54,7 @@ liCategory.forEach(item =>{
         
         // select the element
         this.querySelector('input[type="radio"]').click()
+
     })
 })
 

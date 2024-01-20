@@ -1,4 +1,4 @@
-async function addHeaderAndFooter() {
+export async function addHeaderAndFooter() {
     const response = await fetch('templates.html')
 
     if (!response.ok) {
@@ -15,5 +15,3 @@ async function addHeaderAndFooter() {
     const footerTemplate = templates.content.querySelector('#template-footer').content
     document.querySelector('.footer').appendChild(footerTemplate)
 }
-
-addHeaderAndFooter()
