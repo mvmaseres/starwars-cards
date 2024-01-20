@@ -71,6 +71,18 @@ liDifficulty.forEach(item => {
     })
 })
 
+//BUTTON TO GAME PLAY
+function toGamePlayScreen() {
+    const gamePlayButton = document.getElementById('gameplay-button');
+    
+    gamePlayButton.addEventListener('click', () => {
+        window.location.href = 'gameplay.html';
+    });
+}
+
+toGamePlayScreen();
+
+
 /* LOG IN / SIGN UP */
 const forms = document.querySelectorAll('.forms')
 const pwShowHide = document.querySelectorAll('.eye-icon')

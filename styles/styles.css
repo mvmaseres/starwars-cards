@@ -560,6 +560,7 @@ form#suggests{
     background-color: #EDEEE9;
     border: 1px solid #EDEEE9;
     border-radius: 1rem;
+    cursor: pointer;
 }
 
 #gameplay-button:hover{
