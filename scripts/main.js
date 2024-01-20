@@ -78,11 +78,11 @@ liDifficulty.forEach(item => {
 
 //BUTTON TO GAME PLAY
 function toGamePlayScreen() {
-    const gamePlayButton = document.getElementById('gameplay-button');
+    const gamePlayButton = document.getElementById('gameplay-button')
     
     gamePlayButton.addEventListener('click', () => {
-        window.location.href = 'gameplay.html';
-    });
+        window.location.href = 'gameplay.html'
+    })
 }
 
 toGamePlayScreen();
@@ -152,7 +152,7 @@ const starshipsUrl = 'starships/'
 const vechiclesUrl = 'vehicles/'
 
 async function fetchApi(apiType) {
-    const response = await fetch('https://swapi.dev/api/' + apiType)
+    const response = await fetch(apiUrl + apiType)
     const data = await response.json()
     return data.results
 }
