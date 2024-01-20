@@ -2,7 +2,7 @@
 /*Transition scroll of explication divs*/
 //add event when we observe the intersection of every OberverRight
 const observerRight = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {ç
+    entries.forEach((entry) => {
         //if the object is intersecting
         if (entry.isIntersecting) {
             entry.target.classList.add('fromLeft')
