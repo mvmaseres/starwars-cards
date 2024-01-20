@@ -543,6 +543,30 @@ form#suggests{
     cursor: pointer;
 }
 
+                        /* BUTTON TO GAME-PLAY */
+.button-gameplay{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+#gameplay-button{
+    width: 30%;
+    height: 40px;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #EDEEE9;
+    border: 1px solid #EDEEE9;
+    border-radius: 1rem;
+}
+
+#gameplay-button:hover{
+    background-color: #edeee9b1;
+    border: #edeee9b1;
+}
+
                         /* LOG IN / SIGN IN SCREEN */
 
 #login-page{
