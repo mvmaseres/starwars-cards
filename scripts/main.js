@@ -82,6 +82,29 @@ pwShowHide.forEach(eyeIcon => {
 })
 
 
+/* SEND YOUR COMMENTS */
+let rating = 0
+
+function puntuation () {
+    const starsContainer = document.querySelector('#suggest-page .star-container')
+    starsContainer.addEventListener('click', (event) => clickOnStar(event))
+}
+
+function clickOnStar(event) {
+   if (event.target === event.currentTarget) return
+   
+   const stars = [...document.querySelectorAll('.star')]
+   stars.forEach((star) => star.classList.remove('star-like'))
+
+   rating = stars.indexOf(event.target) + 1
+
+   for ( let i = 0; i < rating; i++) {
+    stars[i].classList.add('star-like')
+   }
+}
+
+puntuation()
+
 
 
 /* Bring the API */

@@ -245,8 +245,7 @@ form#suggests{
     gap: 10px;
 }
 
-.stars{
-    background-image: url(../assets/bb-8.png);
+.star{
     width: 50px;
     height: 50px;
     background-size: cover;
@@ -254,8 +253,13 @@ form#suggests{
     cursor: pointer;
 }
 
+.empty-star{
+    background-image: url(../assets/bb-8.png);
+}
+
 .star-like {
     background-image: url(../assets/bb-8-like.png);
+
 }
 
 .hide {
