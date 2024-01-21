@@ -41,11 +41,10 @@ toLeft.forEach((el) => observerLeft.observe(el))
 /* GAME - SCREEN */
 
 //select category and difficulty
-clickOnCategory()
-clickOnDifficulty()
+
 
 //button to game play screen
-// toGamePlayScreen()
+
 
 
 /* LOG IN / SIGN UP */
