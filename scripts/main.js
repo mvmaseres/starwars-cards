@@ -40,12 +40,6 @@ toLeft.forEach((el) => observerLeft.observe(el))
 
 /* GAME - SCREEN */
 
-//select category and difficulty
-
-
-//button to game play screen
-
-
 
 /* LOG IN / SIGN UP */
 const pwShowHide = document.querySelectorAll('.eye-icon')
