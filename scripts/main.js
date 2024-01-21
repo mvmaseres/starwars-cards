@@ -1,5 +1,5 @@
 import { addHeaderAndFooter } from './templates.js'
-import { clickOnCategory, clickOnDifficulty, toGamePlayScreen } from './game.js'
+import { clickOnCategory, clickOnDifficulty, navegationToGamePlayScreen } from './game.js'
 
 addHeaderAndFooter()
 
@@ -43,10 +43,8 @@ toLeft.forEach((el) => observerLeft.observe(el))
 //select category and difficulty
 clickOnCategory()
 clickOnDifficulty()
-
-//button to game play screen
-// toGamePlayScreen()
-
+//button to game play screen(
+navegationToGamePlayScreen()
 
 /* LOG IN / SIGN UP */
 const pwShowHide = document.querySelectorAll('.eye-icon')
@@ -72,32 +70,32 @@ pwShowHide.forEach(eyeIcon => {
 
 
 /* SEND YOUR COMMENTS */
-// let rating = 0
+let rating = 0
 
-// function puntuation () {
-//     const starsContainer = document.querySelector('#suggest-page .star-container')
-//     //add event to the container
-//     starsContainer.addEventListener('click', (event) => clickOnStar(event))
-// }
+function puntuation () {
+    const starsContainer = document.querySelector('#suggest-page .star-container')
+    //add event to the container
+    starsContainer.addEventListener('click', (event) => clickOnStar(event))
+}
 
-// function clickOnStar(event) {
-//     //if the star is clicked
-//    if (event.target === event.currentTarget) return
+function clickOnStar(event) {
+    //if the star is clicked
+   if (event.target === event.currentTarget) return
     
-//    const stars = [...document.querySelectorAll('.star')]
-//    //remove every star-like img
-//    stars.forEach((star) => star.classList.remove('star-like'))
+   const stars = [...document.querySelectorAll('.star')]
+   //remove every star-like img
+   stars.forEach((star) => star.classList.remove('star-like'))
 
-//    //update the rating to the number of stars clicked
-//    rating = stars.indexOf(event.target) + 1
+   //update the rating to the number of stars clicked
+   rating = stars.indexOf(event.target) + 1
 
-//    //add the star-like img to the number of stars (from the rating result)
-//    for ( let i = 0; i < rating; i++) {
-//     stars[i].classList.add('star-like')
-//    }
-// }
+   //add the star-like img to the number of stars (from the rating result)
+   for ( let i = 0; i < rating; i++) {
+    stars[i].classList.add('star-like')
+   }
+}
 
-// puntuation()
+puntuation()
 
 
 

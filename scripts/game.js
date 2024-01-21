@@ -41,7 +41,7 @@ export function clickOnCategory() {
 }
 
 //BUTTON TO GAME PLAY
-export function toGamePlayScreen() {
+export function navegationToGamePlayScreen() {
     const gamePlayButton = document.getElementById('gameplay-button')
 
     gamePlayButton.addEventListener('click', () => {
