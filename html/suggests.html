@@ -14,18 +14,20 @@
     <main>
         <section id="suggest-page">
             <h1>Send your comments</h1>
-            <form method="post" enctype="multipart/form-data" id="suggests">
+            <form action="https://api.web3forms.com/submit" method="POST" enctype="application/x-www-form-urlencoded" id="suggests">
                 <fieldset>
                     <div id="questions-suggest">
+                        <input type="hidden" name="access_key" value="27b845b7-db78-4e29-86ed-739f45a6e471">
                         <div>
                             <label>How will you evaluate the game?</label>
                             <div class="star-container">
-                                <input class="star empty-star"></input>
-                                <input class="star empty-star"></input>
-                                <input class="star empty-star"></input>
-                                <input class="star empty-star"></input>
-                                <input class="star empty-star"></input>
+                                <div class="star empty-star"></div>
+                                <div class="star empty-star"></div>
+                                <div class="star empty-star"></div>
+                                <div class="star empty-star"></div>
+                                <div class="star empty-star"></div>
                             </div>
+                            <input type="hidden" name="puntuation" id="puntuation" value="0">
                         </div>
                         <div>
                             <label for="evaluation">What will you change?</label><br>

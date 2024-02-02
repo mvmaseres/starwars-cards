@@ -26,4 +26,7 @@ function clickOnStar(event) {
    for ( let i = 0; i < rating; i++) {
     stars[i].classList.add('star-like')
    }
+
+   document.getElementById('puntuation').value = rating
+   console.log(rating)
 }
