@@ -28,5 +28,4 @@ function clickOnStar(event) {
    }
 
    document.getElementById('puntuation').value = rating
-   console.log(rating)
 }
