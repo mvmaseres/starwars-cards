@@ -228,3 +228,26 @@ form .field {
     align-items: center;
     font-weight: bold;
 }
+
+#loading-spinner{
+    padding-top: 1rem;
+    display: flex;
+    left: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+#loading-spinner::after {
+    content: "";
+    width: 45px;
+    height: 45px;
+    border: 15px solid #EDEEE9;
+    border-top-color: rgba(255, 255, 255, 0.121);
+    border-radius: 50%;
+    animation: loading 1s ease infinite;
+}
+
+@keyframes loading {
+    from { transform: rotate(0turn) }
+    to {transform: rotate(1turn);}
+}
