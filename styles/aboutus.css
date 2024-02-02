@@ -1,0 +1,202 @@
+/* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Color pallete: 
+
+Tricorn black: #2C2B2C
+Extra white: #EDEEE9
+Rookwood dark: #492728
+Bitter chocolate: #50433f
+Denim:#6F8FAF
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #EDEEE9;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    background-color: #2C2B2C;
+}
+
+main {
+    font-size: 1.5rem;
+}
+
+/* HEADER */
+
+.header {
+    display: flex;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: bolder;
+    color: white;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    background-color: #333; 
+}
+
+.logo {
+    width: 9%;
+    display: flex;
+    justify-content: center;
+    margin-right: 8rem;
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+}
+
+.header a img {
+    max-width: 100%;
+}
+
+                /* NAV */
+                /* PARENT */
+.header nav {
+    flex: 0 0 75%;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+                /* CHILDREN */
+.header ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%; 
+    padding: 0;
+    margin: 0;
+}
+
+.header li {
+    list-style: none;
+}
+
+.header li a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+} 
+
+                        /*FOOTER*/
+.footer{
+    background-color: #333; 
+    padding: 10px;
+    text-align: center;
+    font-size: 14px; 
+}
+ 
+
+
+ /* ABOUT US */
+ #about-us-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-project{
+    height: 40vh;
+}
+
+.about-project h1 {
+    padding: 0 0 0 1.5rem;
+}
+
+.pre-title,
+.text-about {
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    text-align: justify;
+}
+
+.line-about{
+    position: relative;
+    height: 4px;
+    width: 40%;
+    margin: 1rem 1rem 2rem 1.5rem;
+    background-color: black;
+}
+
+#api-info .line-about,
+#improvments .line-about,
+#acknowledgments .line-about{
+    background-color: white;
+}
+
+#technologies{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#technologies div label{
+    padding: 1rem;
+}
+
+#technologies div label i {
+    padding: 0.5rem;
+}
+
+.fa-html5{
+    color: #e34c26;
+}
+
+.fa-css3-alt{
+    color: #264de4;
+}
+
+.fa-js{
+    color: #F0DB4F;
+}
+
+#api-info div.content {
+    display: flex;
+}
+
+#api-info img {
+    width: 40%;
+    padding-right: 1rem;
+}
+
+#about-us-page #improvments p,
+#about-us-page #challenges p{
+    width: 60%;
+}
+
+#purpose{
+    background-image: url(https://lumiere-a.akamaihd.net/v1/images/star-wars-backgrounds-38_d0dbbfb4.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#api-info{
+    background-color: black;
+}
+
+#technologies{
+    background-color: #2C2B2C;
+    height: 12vh;
+}
+
+#challenges{
+    background-image: url(https://ingyen-hatterkep.hu/hatterkepek_nagyfelbontasu/darth-vader-hatterkep-54411.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#improvments{
+    background-image: url(https://cdna.artstation.com/p/assets/images/images/054/220/284/large/alfie-astley-oldfrontendclone.jpg?1664031384);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#acknowledgments{
+    background-image: url(https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixlib=rb-4.0.3);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
