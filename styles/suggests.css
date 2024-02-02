@@ -169,6 +169,18 @@ form#suggests{
 
 }
 
-.hide {
-    display: none;
+/* THANKS*/
+#thanks {
+    display: flex;
+    justify-content: center
+}
+
+div#form-posted {
+    padding: 2rem;
+    background-image: url(https://blenderartists.org/uploads/default/original/4X/d/c/d/dcd803409d8caf0a0d4a4d805f5012bb1cdbf973.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+    width: 70%;
+    height: 30rem;
 }
