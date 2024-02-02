@@ -91,6 +91,10 @@ main {
  
 
                         /* SEND YOUR COMMENTS */
+#suggest-page h1 {
+    padding: 1rem;
+}
+
 #suggest-page{
     display: flex;
     flex-direction: column;
