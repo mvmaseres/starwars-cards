@@ -2,7 +2,7 @@ import { addHeaderAndFooter, addHeaderAndFooterLogout } from './templates.js'
 
 if(localStorage.getItem("logged") === "true") {
     addHeaderAndFooterLogout()
-} else {
+}  else if (localStorage.getItem("logged") === "false") {
     addHeaderAndFooter()
 }
 

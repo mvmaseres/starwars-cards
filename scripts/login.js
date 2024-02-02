@@ -1,7 +1,12 @@
-import { addHeaderAndFooter } from './templates.js'
+import { addHeaderAndFooter, addHeaderAndFooterLogout } from './templates.js'
 import { authenticate } from './functions.js'
 
-addHeaderAndFooter()
+if(localStorage.getItem("logged") === "true") {
+    addHeaderAndFooterLogout()
+}  else if (localStorage.getItem("logged") === "false") {
+    addHeaderAndFooter()
+}
+
 passwordEye()
 
 function passwordEye() {

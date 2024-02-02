@@ -1,6 +1,11 @@
-import { addHeaderAndFooter } from './templates.js'
+import { addHeaderAndFooter, addHeaderAndFooterLogout } from './templates.js'
 
-addHeaderAndFooter()
+if(localStorage.getItem("logged") === "true") {
+    addHeaderAndFooterLogout()
+}  else if (localStorage.getItem("logged") === "false") {
+    addHeaderAndFooter()
+}
+
 slideDivs()
 
 /*HOME SCREEN */

@@ -34,4 +34,9 @@ export async function addHeaderAndFooterLogout() {
 
     const footerTemplate = templates.content.querySelector('#template-footer').content
     document.querySelector('.footer').appendChild(footerTemplate)
+
+    //check if we click to Log out
+    document.getElementById('logout-link').addEventListener('click', () => {
+    localStorage.setItem("logged", "false")
+})
 }
