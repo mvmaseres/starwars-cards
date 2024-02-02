@@ -1,7 +1,9 @@
-/* if we do click to elements from choose-difficulty, it will be selected */
+                            /* GAME SCREEN */
+
 let difficultyClicked = false
 let categoryClicked = false
 
+/* if we do click to elements from choose-difficulty, it will be selected */
 export function clickOnDifficulty() {
     
     const liDifficulty = document.querySelectorAll('#category-difficulty li')
@@ -59,7 +61,7 @@ function NavegationtoGamePlayScreen() {
 }}
 
 
-/* SEND YOUR COMMENTS */
+                            /* SEND YOUR COMMENTS */
 let rating = 0
 
 export function puntuation () {
@@ -83,4 +85,28 @@ function clickOnStar(event) {
    for ( let i = 0; i < rating; i++) {
     stars[i].classList.add('star-like')
    }
+}
+
+                            /* LOG IN / SIGN UP */
+export function passwordEye() {
+    const pwShowHide = document.querySelectorAll('.eye-icon')
+
+    pwShowHide.forEach(eyeIcon => {
+        //if the eyeicon is clicked
+        eyeIcon.addEventListener("click", () => {
+            let pwFields = eyeIcon.parentElement.parentElement.querySelectorAll(".password")
+
+            pwFields.forEach(password => {
+                //if the field is in mode password show the text
+                if(password.type === "password") {
+                    password.type = "text"
+                    eyeIcon.classList.replace("bx-hidde", "bx-show")
+                    return
+                }
+                //if it is not selected, change to password mode
+                password.type = "password"
+                eyeIcon.classList.replace("bx-show", "bx-hidde")
+            })
+        })
+    })
 }
