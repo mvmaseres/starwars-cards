@@ -91,7 +91,6 @@ main {
  
 
                         /* SEND YOUR COMMENTS */
-
 #suggest-page{
     display: flex;
     flex-direction: column;
@@ -164,6 +163,11 @@ form#suggests{
 .star-like {
     background-image: url(../assets/bb-8-like.png);
 
+}
+
+input {
+    background: none;
+    border: none;
 }
 
 .hide {
