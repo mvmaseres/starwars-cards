@@ -1,0 +1,284 @@
+/* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Color pallete: 
+
+Tricorn black: #2C2B2C
+Extra white: #EDEEE9
+Rookwood dark: #492728
+Bitter chocolate: #50433f
+Denim:#6F8FAF
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #EDEEE9;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    background-color: #2C2B2C;
+}
+
+main {
+    font-size: 1.5rem;
+}
+
+/* HEADER */
+
+.header {
+    display: flex;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: bolder;
+    color: white;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    background-color: #333; 
+}
+
+.logo {
+    width: 9%;
+    display: flex;
+    justify-content: center;
+    margin-right: 8rem;
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+}
+
+.header a img {
+    max-width: 100%;
+}
+
+                /* NAV */
+                /* PARENT */
+.header nav {
+    flex: 0 0 75%;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+                /* CHILDREN */
+.header ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%; 
+    padding: 0;
+    margin: 0;
+}
+
+.header li {
+    list-style: none;
+}
+
+.header li a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+} 
+
+                        /*FOOTER*/
+.footer{
+    background-color: #333; 
+    padding: 10px;
+    text-align: center;
+    font-size: 14px; 
+}
+ 
+
+ /* GAME */
+                        /*TEXT*/
+
+#title-game,
+#choose-category h2,
+.choose-difficulty h2 {
+    margin: 0.25em auto;
+    width: 90%;
+}
+
+#game-rules{
+    margin: 0.5em auto;
+    padding: 1em;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+#game-rules h1,
+#game-rules p {
+    margin-top: 1rem;
+    text-align: justify;
+}
+
+ 
+                        /* ACCORDION STYLES */
+#category-accordion {
+    margin: 1.2em auto;
+    width: 90%;
+}
+
+#category-accordion ul{
+    display: flex;
+    flex-direction: row; 
+    width: 100%; 
+    justify-content: center;
+    overflow: hidden;
+}
+
+#category-accordion li {
+    list-style: none;
+    height: 20rem;
+    width: 15%;
+    margin-bottom: 1em;
+    padding: 10px;
+    border-radius: 10px;   
+    cursor: pointer;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    transition: width 1s;
+}
+
+#film-category{
+    background-image: url(https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/81A736C2B6CC7B7B4A3F2E2381E36542715DFC550F765F49BC0770898DE5F32B/scale?width=1200&aspectRatio=1.78&format=jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#character-category{
+    background-image: url(https://images.bauerhosting.com/legacy/empire-images/features/560ebc7b50e6c513721c309f/Ben%20Kenobi.jpg?ar=16%3A9&fit=crop&crop=top&auto=format&w=undefined&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#planet-category{
+    background-image: url(https://www.denofgeek.com/wp-content/uploads/2021/04/star-wars-bespin-cloud-city.jpg?resize=1024,577);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#specie-category{
+    background-image: url(https://www.denofgeek.com/wp-content/uploads/2019/12/Jabba-the-Hutt-in-Star-Wars.jpeg?fit=1200%2C675);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#starship-category{
+    background-image: url(https://www.cnet.com/a/img/resize/ff32644af8398591a22d88f8c2e569c7c0d88bb4/hub/2020/01/09/f79a9662-35a4-4676-bbf6-b71a223e0a5c/ship-tie-razor-crest.jpg?auto=webp&fit=crop&height=675&width=1200);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#vehicle-category{
+    background-image: url(https://lumiere-a.akamaihd.net/v1/images/Which-Star-Wars-Vehicle-is-Meant-For-You-AT-AT_e1161c77.jpeg?region=56%2C0%2C888%2C500);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#category-accordion li label {
+    font-size: 18px;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+}
+
+#category-accordion input[type="radio"] {
+    display: none;
+}
+
+                        /* CHOOSE DIFFICULTY */
+
+#category-difficulty input[type="radio"] {
+    display: none;
+}
+
+#difficulty-easy {
+    background-image: url(https://i.pinimg.com/originals/cc/19/82/cc19825a05d7aca4c4c10e3c4947b509.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#difficulty-medium {
+    background-image: url(https://medialab.news/wp-content/uploads/2022/06/anakin.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#difficulty-hard {
+    background-image: url(https://lafrikileria.com/blog/wp-content/uploads/2023/05/villanos-star-wars.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#category-difficulty {
+    margin: 1.2em auto;
+    width: 90%;
+}
+
+#category-difficulty ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    overflow: hidden;
+}
+
+#category-difficulty li {
+    list-style: none;
+    height: 20rem;
+    width: 30%;
+    margin-bottom: 1em;
+    padding: 10px;
+    border-radius: 10px;   
+    cursor: pointer;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#category-difficulty li label {
+    font-size: 18px;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+}
+
+                        /* BUTTON TO GAME-PLAY */
+.button-gameplay{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+#gameplay-button{
+    width: 30%;
+    height: 40px;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #EDEEE9;
+    border: 1px solid #EDEEE9;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+#gameplay-button:hover{
+    background-color: #edeee9b1;
+    border: #edeee9b1;
+}

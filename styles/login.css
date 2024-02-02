@@ -1,0 +1,286 @@
+/* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Color pallete: 
+
+Tricorn black: #2C2B2C
+Extra white: #EDEEE9
+Rookwood dark: #492728
+Bitter chocolate: #50433f
+Denim:#6F8FAF
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #EDEEE9;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    background-color: #2C2B2C;
+}
+
+main {
+    font-size: 1.5rem;
+}
+
+/* HEADER */
+
+.header {
+    display: flex;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: bolder;
+    color: white;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    background-color: #333; 
+}
+
+.logo {
+    width: 9%;
+    display: flex;
+    justify-content: center;
+    margin-right: 8rem;
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+}
+
+.header a img {
+    max-width: 100%;
+}
+
+                /* NAV */
+                /* PARENT */
+.header nav {
+    flex: 0 0 75%;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+                /* CHILDREN */
+.header ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%; 
+    padding: 0;
+    margin: 0;
+}
+
+.header li {
+    list-style: none;
+}
+
+.header li a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+} 
+
+                        /*FOOTER*/
+.footer{
+    background-color: #333; 
+    padding: 10px;
+    text-align: center;
+    font-size: 14px; 
+}
+ 
+
+ /* LOG IN / SIGN IN SCREEN */
+
+ #login-page{
+    display: flex;
+    flex-direction: column;
+}
+
+#login-page h1{
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+}
+
+.forms {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 40px;
+    margin-bottom: 3em;
+}
+
+.form {
+    max-width: 430px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 20px;
+    background-image: url(https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixlib=rb-4.0.3);
+    background-size: cover;
+    border: 1px solid #EDEEE9;
+}
+
+.form h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #EDEEE9; 
+    text-align: center;
+}
+
+form {
+    margin-top: 30px;
+}
+
+form .field {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 6px;
+}
+
+.field input,
+.field button {
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 6px;
+    color: #2C2B2C;
+}
+
+.field input {
+    outline: none;
+    padding: 0 15px;
+    border: 1px solid #6F8FAF;
+}
+
+.field input:focus{
+    border-bottom-width: 2px;
+}
+
+.eye-icon{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #6F8FAF;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.field button{
+    color: #EDEEE9;
+    background-color: #6F8FAF;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.field button:hover{
+    background-color: #98aabc;
+}
+
+.form-link {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.forms a {
+    text-decoration: none;
+    color: #6F8FAF;
+}
+
+form a:hover {
+    text-decoration: underline;
+}
+
+.line{
+    position: relative;
+    height: 1px;
+    width: 100%;
+    margin: 36px 0;
+    background-color: #6F8FAF;
+}
+
+.line::before{
+    color: #6F8FAF;
+    content: "Or";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixlib=rb-4.0.3);
+    padding: 0 15px;
+    font-size: 16px;
+}
+
+.media-options a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #EDEEE9;
+    font-size: 16px;
+    padding: 6px;
+    border-radius: 50px;
+    margin-bottom: 10px;
+}
+
+a.facebook {
+    background-color: #0171d3;
+}
+
+a.facebook .facebook-icon{
+    height: 28px;
+    width: 28px;
+    color: #0171d3;
+    font-size: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    position: absolute;
+    transform: translateX(-500%);
+}
+
+a .google-img {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    transform: translateX(-700%);
+}
+
+a.field.google {
+    background-color: #ffff;
+    border: 1px solid #CACACA;
+}
+
+a.field.google span {
+    font-weight: 500;
+    opacity: 0.6;
+    color: #232836;
+}
+
+.apple img {
+    height: 24px;
+    position: absolute;
+    color: black;
+    transform: translateX(-430%);
+}
+
+a.field.apple {
+    background-color: #ffff;
+    border: 1px solid #ffff;
+}
+
+a.field.apple span {
+    font-weight: 500;
+    color: black;
+}
