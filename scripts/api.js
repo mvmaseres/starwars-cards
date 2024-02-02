@@ -13,9 +13,9 @@ async function fetchApi(apiType) {
     return data.results
 }
 
-const films = await fetchApi(filmsUrl)
-const people = await fetchApi(peopleUrl)
-const planets = await fetchApi(planetsUrl)
-const species = await fetchApi(speciesUrl)
-const starships = await fetchApi(starshipsUrl)
-const vehicles = await fetchApi(vechiclesUrl)
+export const films = await fetchApi(filmsUrl)
+export const people = await fetchApi(peopleUrl)
+export const planets = await fetchApi(planetsUrl)
+export const species = await fetchApi(speciesUrl)
+export const starships = await fetchApi(starshipsUrl)
+export const vehicles = await fetchApi(vechiclesUrl)
