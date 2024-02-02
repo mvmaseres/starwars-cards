@@ -1,4 +1,5 @@
 import { addHeaderAndFooter } from './templates.js'
+import { authenticate } from './functions.js'
 
 addHeaderAndFooter()
 passwordEye()
@@ -26,3 +27,4 @@ function passwordEye() {
     })
 }
 
+authenticate()

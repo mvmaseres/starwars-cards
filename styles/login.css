@@ -201,3 +201,30 @@ form .field {
 #demo-login strong {
     color: #6F8FAF;
 }
+
+.hide {
+    display: none !important;
+}
+
+#message-container {
+    max-width: 430px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 20px;
+    background-image: url(https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixlib=rb-4.0.3);
+    background-size: cover;
+    border: 1px solid #EDEEE9;
+}
+
+#wrong-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 0.5rem;
+}
+
+#wrong-container p{
+    font-size: 20px;
+    color: rgb(217, 62, 62);
+    align-items: center;
+    font-weight: bold;
+}
