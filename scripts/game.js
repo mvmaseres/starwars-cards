@@ -1,6 +1,10 @@
-import { addHeaderAndFooter } from './templates.js'
+import { addHeaderAndFooter, addHeaderAndFooterLogout } from './templates.js'
 
-addHeaderAndFooter()
+if(localStorage.getItem("logged") === "true") {
+    addHeaderAndFooterLogout()
+} else {
+    addHeaderAndFooter()
+}
 
 /* GAME - SCREEN */
 clickOnDifficulty()

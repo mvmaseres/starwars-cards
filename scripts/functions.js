@@ -32,6 +32,9 @@ export function authenticate() {
                 window.location.href = 'game.html';
             }, 3000);
 
+            //logged is true
+            localStorage.setItem("logged", "true")
+
         } else {
             //show a message to wrong user o password
             wrongMessage.classList.remove('hide')
