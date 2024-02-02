@@ -186,95 +186,18 @@ form .field {
     font-weight: 400;
 }
 
-.forms a {
-    text-decoration: none;
-    color: #6F8FAF;
-}
-
-form a:hover {
-    text-decoration: underline;
-}
-
-.line{
-    position: relative;
-    height: 1px;
-    width: 100%;
-    margin: 36px 0;
-    background-color: #6F8FAF;
-}
-
-.line::before{
-    color: #6F8FAF;
-    content: "Or";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-image: url(https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixlib=rb-4.0.3);
-    padding: 0 15px;
-    font-size: 16px;
-}
-
-.media-options a {
+#demo-login {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    color: #EDEEE9;
+    border-radius: 20px;
+    margin: 1rem;
+    padding: 0.2rem;
     font-size: 16px;
-    padding: 6px;
-    border-radius: 50px;
-    margin-bottom: 10px;
+    border: 1px solid #EDEEE9;
+    background-color: rgba(255, 255, 255, 0.121);
 }
 
-a.facebook {
-    background-color: #0171d3;
-}
-
-a.facebook .facebook-icon{
-    height: 28px;
-    width: 28px;
-    color: #0171d3;
-    font-size: 20px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
-    position: absolute;
-    transform: translateX(-500%);
-}
-
-a .google-img {
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    transform: translateX(-700%);
-}
-
-a.field.google {
-    background-color: #ffff;
-    border: 1px solid #CACACA;
-}
-
-a.field.google span {
-    font-weight: 500;
-    opacity: 0.6;
-    color: #232836;
-}
-
-.apple img {
-    height: 24px;
-    position: absolute;
-    color: black;
-    transform: translateX(-430%);
-}
-
-a.field.apple {
-    background-color: #ffff;
-    border: 1px solid #ffff;
-}
-
-a.field.apple span {
-    font-weight: 500;
-    color: black;
+#demo-login strong {
+    color: #6F8FAF;
 }
