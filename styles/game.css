@@ -283,3 +283,17 @@ main {
     background-color: #edeee9b1;
     border: #edeee9b1;
 }
+
+.hide {
+    display: none;
+}
+
+.message {
+    display: flex;
+    justify-content: center;
+}
+
+.message p {
+    color: rgb(217, 62, 62);
+    font-weight: bold;
+}

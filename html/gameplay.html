@@ -9,7 +9,36 @@
 </head>
 <body>
     <header class="header"></header>
-    <main></main>
+    <main>
+        <h1>Guessing game</h1>
+        <section id="table-game">
+            <div id="gameplay-info">
+                <p><strong>Category:</strong><span id="cat-playing"></span></p>
+                <p><strong>Mode:</strong><span id="mode-playing"></span></p>
+                <button id="reset">Reset</button>
+            </div>
+            <section id="gameplay">
+                <div id="info-to-play">
+                    <p><strong>Time:</strong><span id="time"></span></p>
+                    <section id="tries">
+                        <p>Attempts</p>
+                        <div id="attempts"></div>
+                    </section>
+                </div>
+                <div id="answer">
+                    <img src="" alt="" class="unknown">
+                    <label for="userInput">Enter your answer:</label>
+                    <input type="text" id="userInput">
+                    <button id="submit">Submit</button>
+                </div>
+                <div id="game-clues">
+                    <button id="get-clues"> Generate clues</button>
+                    <div id="clues">
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
     <footer class="footer">
     </footer>
 </body>

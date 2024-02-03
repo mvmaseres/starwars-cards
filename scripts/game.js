@@ -15,6 +15,8 @@ clickOnCategory()
 let categoryClicked = false
 let difficultyClicked = false
 
+NavegationtoGamePlayScreen()
+
 export let selectedCategory
 export let selectedDifficulty
 
@@ -76,10 +78,31 @@ function clickOnCategory() {
 
 //BUTTON TO GAME PLAY
 function NavegationtoGamePlayScreen() {
-    if(difficultyClicked && categoryClicked) {
-        const gamePlayButton = document.getElementById('gameplay-button')
 
-        gamePlayButton.addEventListener('click', () => {
-            window.location.href = 'gameplay.html'
-        })
-}}
+    const twoUnchosen = document.getElementById('unchosen')
+    const catUnchosen = document.getElementById('unchosenCategory')
+    const diffUnchosen = document.getElementById('unchosenDifficulty')
+
+    const gamePlayButton = document.getElementById('gameplay-button')
+    gamePlayButton.addEventListener('click', () => {
+
+        if(difficultyClicked && categoryClicked) {
+
+        window.location.href = 'gameplay.html'
+
+        } else if (difficultyClicked === false && categoryClicked === false ) {
+            twoUnchosen.classList.remove('hide')
+            catUnchosen.classList.add('hide')
+            diffUnchosen.classList.add('hide')
+        } else if (difficultyClicked && categoryClicked === false ) {
+            catUnchosen.classList.remove('hide')
+            twoUnchosen.classList.add('hide')
+            diffUnchosen.classList.add('hide')
+        } else {
+            diffUnchosen.classList.remove('hide')
+            twoUnchosen.classList.add('hide')
+            catUnchosen.classList.add('hide') 
+        }
+    })
+}
+
