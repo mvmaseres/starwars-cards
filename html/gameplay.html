@@ -19,14 +19,16 @@
             </div>
             <section id="gameplay">
                 <div id="info-to-play">
-                    <p><strong>Time:</strong> <span id="time">2:00</span></p>
+                    <p class="time"><strong>Time:</strong> <span class="time">2:00</span></p>
                     <section id="tries">
                         <p><strong>Attempts</strong></p>
                         <div id="attempts">5</div>
                     </section>
                 </div>
                 <div id="answer">
-                    <img src="../assets/bb-8.png" alt="image to guess" class="unknown">
+                    <div class="unknown">
+                        <img src="../assets/darklogo.png" alt="image to guess">
+                    </div>
                     <label for="userInput">Enter your answer:</label>
                     <input type="text" id="userInput">
                     <button id="submit">Submit</button>
@@ -34,8 +36,13 @@
                 <div id="game-clues">
                     <button id="get-clues"> Generate clues</button>
                     <div id="clues">
-                        <p>It is a clue</p>
-                        <p>This is other clue</p>
+                        <ul>
+                            <li>This is a clue</li>
+                            <li>This is other clue</li>
+                            <li>I get other clue</li>
+                            <li>An extra clue</li>
+                            <li>A very long clue to guess the character</li>
+                        </ul>
                     </div>
                 </div>
             </section>
