@@ -18,3 +18,16 @@ function showCategoryDifficulty() {
 }
 
 showCategoryDifficulty()
+
+
+function resetGame() {
+    const resetBtn = document.getElementById('reset')
+
+    resetBtn.addEventListener('click', () => {
+        localStorage.removeItem('selectedCategory')
+        localStorage.removeItem('selectedDifficulty')
+        window.location.href = 'game.html'
+    })
+}
+
+resetGame()
