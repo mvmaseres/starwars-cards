@@ -236,6 +236,7 @@ button {
     border: 1px solid #EDEEE9;
     border-radius: 25px;
     padding: 0.5rem;
+    cursor: pointer;
 }
 
 button:hover {
