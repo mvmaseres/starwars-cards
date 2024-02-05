@@ -1,6 +1,12 @@
 import { addHeaderAndFooter, addHeaderAndFooterLogout } from './templates.js'
 import { showCategoryDifficulty, resetGame, blockButtons } from './functions.js'
-import { films, people, planets, species, starships, vehicles} from './api.js'
+// import { films, people, planets, species, starships, vehicles, fetchElement} from './api.js'
+import Film from './classes/Film.js'
+import People from './classes/People.js'
+import Planet from './classes/Planet.js'
+import Specie from './classes/Specie.js'
+import Starship from './classes/Starship.js'
+import Vehicle from './classes/Vehicle.js'
 
 if(localStorage.getItem("logged") === "true") {
     addHeaderAndFooterLogout()
@@ -12,48 +18,47 @@ showCategoryDifficulty()
 resetGame()
 blockButtons()
 
-// const selectedCategory = localStorage.getItem('selectedCategory')
+const selectedCategory = localStorage.getItem('selectedCategory')
 
-// function generateClue() {
+function showClues() {
+    const listClues = document.querySelector('#clues ul')
 
-//     const clueList = document.querySelector('#game-clues ul')
-//     const newClue = document.createElement('li')
+    const liElement = document.createElement('li')
 
-//     switch (true) {
-//         case selectedCategory === 'Film':
-//             newClue.textContent = `The name of the film is ${films[0].title}`
-//             clueList.appendChild(newClue);
 
-//             break
-//         case selectedCategory === 'Character':
-//             newClue.textContent = `The name of the character is ${people[0].name}`
-//             clueList.appendChild(newClue);
+    switch (true) {
+        case selectedCategory === 'Film':
+            const storedFilms = Object.values(new Film (JSON.parse(localStorage.getItem('categoryObject'))))
+            liElement.textContent = storedFilms[randomClues(storedFilms)]
+            break
+        case selectedCategory === 'Character':
+            const storedPeople = Object.values(new People (JSON.parse(localStorage.getItem('categoryObject'))))
+            liElement.textContent = storedPeople[randomClues(storedPeople)]
+            break
+        case selectedCategory === 'Planet':
+            const storedPlanet = Object.values(new Planet (JSON.parse(localStorage.getItem('categoryObject'))))
+            liElement.textContent = storedPlanet[randomClues(storedPlanet)]
+            break
+        case selectedCategory === 'Specie':
+            const storedSpecie = Object.values(new Specie (JSON.parse(localStorage.getItem('categoryObject'))))
+            liElement.textContent = storedSpecie[randomClues(storedSpecie)]
+            break
+        case selectedCategory === 'Starship':
+            const storedStarship = Object.values(new Starship (JSON.parse(localStorage.getItem('categoryObject'))))
+            liElement.textContent = storedStarship[randomClues(storedStarship)]
+            break
+        case selectedCategory === 'Vehicle':
+            const storedVehicle = Object.values(new Vehicle (JSON.parse(localStorage.getItem('categoryObject'))))
+            liElement.textContent = storedVehicle[randomClues(storedVehicle)]
+            break
+    }
 
-//             break
-//         case selectedCategory === 'Planet':
-//             newClue.textContent = `The name of the planet is ${planets[0].name}`
-//             clueList.appendChild(newClue);
+    listClues.appendChild(liElement)
+}
 
-//             break
-//         case selectedCategory === 'Specie':
-//             newClue.textContent = `The name of the specie is ${species[0].name}`
-//             clueList.appendChild(newClue);
+showClues()
 
-//             break
-//         case selectedCategory === 'Starship':
-//             newClue.textContent = `The name of the starship is ${starships[0].name}`
-//             clueList.appendChild(newClue);
+function randomClues(type) {
+    return Math.floor(Math.random() * type.length + 1)
+}
 
-//             break
-//         case selectedCategory === 'Vehicle':
-//             newClue.textContent = `The name of the vehicle is ${vehicles[0].name}`
-//             clueList.appendChild(newClue);
-
-//             break
-//         default:
-//             console.error('SOMETHING WAS WRONG')
-//     }
-
-// }
-
-// generateClue()

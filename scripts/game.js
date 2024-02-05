@@ -1,4 +1,5 @@
 import { addHeaderAndFooter, addHeaderAndFooterLogout } from './templates.js'
+import { films, people, planets, species, starships, vehicles, fetchElement} from './api.js'
 
 if(localStorage.getItem("logged") === "true") {
     addHeaderAndFooterLogout()
@@ -76,6 +77,11 @@ function clickOnCategory() {
     })
 }
 
+function randomClues(type) {
+    return Math.floor(Math.random() * type.length + 1)
+}
+
+
 //BUTTON TO GAME PLAY
 function NavegationtoGamePlayScreen() {
 
@@ -89,6 +95,28 @@ function NavegationtoGamePlayScreen() {
         if(difficultyClicked && categoryClicked) {
         localStorage.setItem('selectedCategory', selectedCategory)
         localStorage.setItem('selectedDifficulty', selectedDifficulty)
+        
+        switch (true) {
+            case selectedCategory === 'Film':
+                localStorage.setItem('categoryObject', JSON.stringify(films[randomClues(films)]))
+                break
+            case selectedCategory === 'Character':
+                localStorage.setItem('categoryObject', JSON.stringify(people[randomClues(people)]))
+                break
+            case selectedCategory === 'Planet':
+                localStorage.setItem('categoryObject', JSON.stringify(planets[randomClues(planets)]))
+                break
+            case selectedCategory === 'Specie':
+                localStorage.setItem('categoryObject', JSON.stringify(species[randomClues(species)]))
+                break
+            case selectedCategory === 'Starship':
+                localStorage.setItem('categoryObject', JSON.stringify(starships[randomClues(starships)]))
+                break
+            case selectedCategory === 'Vehicle':
+                localStorage.setItem('categoryObject',  JSON.stringify(vehicles[randomClues(vehicles)]))
+                break
+        }
+
         window.location.href = 'gameplay.html'
 
         } else if (difficultyClicked === false && categoryClicked === false ) {
@@ -106,4 +134,6 @@ function NavegationtoGamePlayScreen() {
         }
     })
 }
+
+
 
