@@ -146,42 +146,42 @@ main {
     transition: width 1s;
 }
 
-#film-category{
+#Film{
     background-image: url(https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/81A736C2B6CC7B7B4A3F2E2381E36542715DFC550F765F49BC0770898DE5F32B/scale?width=1200&aspectRatio=1.78&format=jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
 }
 
-#character-category{
+#Character{
     background-image: url(https://images.bauerhosting.com/legacy/empire-images/features/560ebc7b50e6c513721c309f/Ben%20Kenobi.jpg?ar=16%3A9&fit=crop&crop=top&auto=format&w=undefined&q=80);
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
 }
 
-#planet-category{
+#Planet{
     background-image: url(https://www.denofgeek.com/wp-content/uploads/2021/04/star-wars-bespin-cloud-city.jpg?resize=1024,577);
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
 }
 
-#specie-category{
+#Specie{
     background-image: url(https://www.denofgeek.com/wp-content/uploads/2019/12/Jabba-the-Hutt-in-Star-Wars.jpeg?fit=1200%2C675);
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
 }
 
-#starship-category{
+#Starship{
     background-image: url(https://www.cnet.com/a/img/resize/ff32644af8398591a22d88f8c2e569c7c0d88bb4/hub/2020/01/09/f79a9662-35a4-4676-bbf6-b71a223e0a5c/ship-tie-razor-crest.jpg?auto=webp&fit=crop&height=675&width=1200);
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
 }
 
-#vehicle-category{
+#Vehicle{
     background-image: url(https://lumiere-a.akamaihd.net/v1/images/Which-Star-Wars-Vehicle-is-Meant-For-You-AT-AT_e1161c77.jpeg?region=56%2C0%2C888%2C500);
     background-size: cover;
     background-repeat: no-repeat;
@@ -205,21 +205,21 @@ main {
     display: none;
 }
 
-#difficulty-easy {
+#Begginer {
     background-image: url(https://i.pinimg.com/originals/cc/19/82/cc19825a05d7aca4c4c10e3c4947b509.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
 }
 
-#difficulty-medium {
+#Intermediate {
     background-image: url(https://medialab.news/wp-content/uploads/2022/06/anakin.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
 }
 
-#difficulty-hard {
+#Expert {
     background-image: url(https://lafrikileria.com/blog/wp-content/uploads/2023/05/villanos-star-wars.jpg);
     background-size: cover;
     background-repeat: no-repeat;

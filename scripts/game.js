@@ -17,8 +17,8 @@ let difficultyClicked = false
 
 NavegationtoGamePlayScreen()
 
-export let selectedCategory
-export let selectedDifficulty
+let selectedCategory
+let selectedDifficulty
 
 /* if we do click to elements from choose-difficulty, it will be selected */
 function clickOnDifficulty() {
@@ -87,7 +87,8 @@ function NavegationtoGamePlayScreen() {
     gamePlayButton.addEventListener('click', () => {
 
         if(difficultyClicked && categoryClicked) {
-
+        localStorage.setItem('selectedCategory', selectedCategory)
+        localStorage.setItem('selectedDifficulty', selectedDifficulty)
         window.location.href = 'gameplay.html'
 
         } else if (difficultyClicked === false && categoryClicked === false ) {

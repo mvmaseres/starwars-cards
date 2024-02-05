@@ -5,3 +5,6 @@ if(localStorage.getItem("logged") === "true") {
 }  else if (localStorage.getItem("logged") === "false") {
     addHeaderAndFooter()
 }
+
+const selectedCategory = localStorage.getItem('selectedCategory')
+const selectedDifficulty = localStorage.getItem('selectedDifficulty')
