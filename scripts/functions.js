@@ -103,16 +103,18 @@ export function countdown() {
 
 export function blockButtons() {
     const spanTime = document.querySelector('span.time')
-
     const starPlay = document.createElement('button')
-    starPlay.classList.add('pressToStart')
-    starPlay.textContent = 'Press to start'
-    spanTime.appendChild(starPlay)
 
-    starPlay.addEventListener('click', () => {
+    if (selectedCategory && selectedDifficulty) {
+        starPlay.classList.add('pressToStart')
+        starPlay.textContent = 'Press to start'
+        spanTime.appendChild(starPlay)
+
+        starPlay.addEventListener('click', () => {
         btnSubmit.removeAttribute('disabled')
         btnClues.removeAttribute('disabled')
         spanTime.removeChild(starPlay)
         countdown()
-    })
+        })
+    } 
 }
