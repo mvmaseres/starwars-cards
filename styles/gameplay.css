@@ -251,3 +251,18 @@ button#reset {
     margin-left: 2rem;
     margin-top: 0.5rem;
 }
+
+button.pressToStart {
+    width: 160px;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.timeOut {
+    color: rgb(217, 62, 62);
+    font-weight: bold;
+}
+
