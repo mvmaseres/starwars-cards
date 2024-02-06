@@ -1,5 +1,5 @@
 import { addHeaderAndFooter, addHeaderAndFooterLogout } from './templates.js'
-import { films, people, planets, species, starships, vehicles, fetchElement} from './api.js'
+import { filmsUrl, peopleUrl, planetsUrl, speciesUrl, starshipsUrl, vechiclesUrl, fetchApi} from './api.js'
 
 if(localStorage.getItem("logged") === "true") {
     addHeaderAndFooterLogout()
@@ -15,8 +15,6 @@ clickOnCategory()
 
 let categoryClicked = false
 let difficultyClicked = false
-
-NavegationtoGamePlayScreen()
 
 let selectedCategory
 let selectedDifficulty
@@ -77,11 +75,6 @@ function clickOnCategory() {
     })
 }
 
-function randomClues(type) {
-    return Math.floor(Math.random() * type.length + 1)
-}
-
-
 //BUTTON TO GAME PLAY
 function NavegationtoGamePlayScreen() {
 
@@ -90,7 +83,7 @@ function NavegationtoGamePlayScreen() {
     const diffUnchosen = document.getElementById('unchosenDifficulty')
 
     const gamePlayButton = document.getElementById('gameplay-button')
-    gamePlayButton.addEventListener('click', () => {
+    gamePlayButton.addEventListener('click', async () => {
 
         if(difficultyClicked && categoryClicked) {
         localStorage.setItem('selectedCategory', selectedCategory)
@@ -98,22 +91,29 @@ function NavegationtoGamePlayScreen() {
         
         switch (true) {
             case selectedCategory === 'Film':
-                localStorage.setItem('categoryObject', JSON.stringify(films[randomClues(films)]))
+                const films = await fetchApi(filmsUrl)
+                localStorage.setItem('categoryObject', JSON.stringify(films))
+                console.log("FILMS")
                 break
             case selectedCategory === 'Character':
-                localStorage.setItem('categoryObject', JSON.stringify(people[randomClues(people)]))
+                const people = await fetchApi(peopleUrl)
+                localStorage.setItem('categoryObject', JSON.stringify(people))
                 break
             case selectedCategory === 'Planet':
-                localStorage.setItem('categoryObject', JSON.stringify(planets[randomClues(planets)]))
+                const planets = await fetchApi(planetsUrl)
+                localStorage.setItem('categoryObject', JSON.stringify(planets))
                 break
             case selectedCategory === 'Specie':
-                localStorage.setItem('categoryObject', JSON.stringify(species[randomClues(species)]))
+                const species = await fetchApi(speciesUrl)
+                localStorage.setItem('categoryObject', JSON.stringify(species))
                 break
-            case selectedCategory === 'Starship':
-                localStorage.setItem('categoryObject', JSON.stringify(starships[randomClues(starships)]))
+            case selectedCategory === 'Starship':                    
+                const starships = await fetchApi(starshipsUrl)
+                localStorage.setItem('categoryObject', JSON.stringify(starships))
                 break
             case selectedCategory === 'Vehicle':
-                localStorage.setItem('categoryObject',  JSON.stringify(vehicles[randomClues(vehicles)]))
+                const vehicles = await fetchApi(vechiclesUrl)
+                localStorage.setItem('categoryObject', JSON.stringify(vehicles))
                 break
         }
 
@@ -134,6 +134,3 @@ function NavegationtoGamePlayScreen() {
         }
     })
 }
-
-
-

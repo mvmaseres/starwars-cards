@@ -8,8 +8,8 @@ export default class Film {
         this.release_date  = `It was first realased in the USA on ${data.release_date}`
         this.characters = Array.isArray(data.characters) ? data.characters.map(character => `${character} appears in the film`) : []
         this.planets = Array.isArray(data.planets) ? data.planets.map(planet => `In the film features the planet ${planet}`) : []
-        this.starships = Array.isArray(data.starships) ? data.starships.map(starship => `The ${starship} appears in the film`) : []
-        this.vehicles = Array.isArray(data.vehicles) ? data.vehicles.map(vehicle => `The ${vehicle} appears in the film`) : []
-        this.species = Array.isArray(data.species) ? data.species.map(specie => `The ${specie} species appears`) : []
+        this.starships = Array.isArray(data.starships) ? data.starships.map(starship => `${starship} appears in the film`) : []
+        this.vehicles = Array.isArray(data.vehicles) ? data.vehicles.map(vehicle => `${vehicle} appears in the film`) : []
+        this.species = Array.isArray(data.species) ? data.species.map(specie => `${specie} species appears`) : []
     }
 }

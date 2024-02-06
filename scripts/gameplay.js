@@ -1,6 +1,6 @@
 import { addHeaderAndFooter, addHeaderAndFooterLogout } from './templates.js'
 import { showCategoryDifficulty, resetGame, blockButtons } from './functions.js'
-// import { films, people, planets, species, starships, vehicles, fetchElement} from './api.js'
+import { regularFetch } from './api.js'
 import Film from './classes/Film.js'
 import People from './classes/People.js'
 import Planet from './classes/Planet.js'
@@ -20,45 +20,102 @@ blockButtons()
 
 const selectedCategory = localStorage.getItem('selectedCategory')
 
-function showClues() {
+
+async function showClues() {
     const listClues = document.querySelector('#clues ul')
 
     const liElement = document.createElement('li')
 
-
     switch (true) {
         case selectedCategory === 'Film':
-            const storedFilms = Object.values(new Film (JSON.parse(localStorage.getItem('categoryObject'))))
-            liElement.textContent = storedFilms[randomClues(storedFilms)]
+            //es una array de objetos
+            const storedFilms = JSON.parse(localStorage.getItem('categoryObject'))
+            let randomFilm = new Film (randomElement(storedFilms))
+            liElement.textContent = await obtainClue(randomFilm)
             break
         case selectedCategory === 'Character':
-            const storedPeople = Object.values(new People (JSON.parse(localStorage.getItem('categoryObject'))))
-            liElement.textContent = storedPeople[randomClues(storedPeople)]
+            const storedPeople = JSON.parse(localStorage.getItem('categoryObject'))
+            let randomPeople = new People (randomElement(storedPeople))
+            liElement.textContent = await obtainClue(randomPeople)
             break
         case selectedCategory === 'Planet':
-            const storedPlanet = Object.values(new Planet (JSON.parse(localStorage.getItem('categoryObject'))))
-            liElement.textContent = storedPlanet[randomClues(storedPlanet)]
+            const storedPlanet = JSON.parse(localStorage.getItem('categoryObject'))
+            let randomPlanet = new Planet (randomElement(storedPlanet))
+            liElement.textContent = await obtainClue(randomPlanet)
             break
         case selectedCategory === 'Specie':
-            const storedSpecie = Object.values(new Specie (JSON.parse(localStorage.getItem('categoryObject'))))
-            liElement.textContent = storedSpecie[randomClues(storedSpecie)]
+            const storedSpecie = JSON.parse(localStorage.getItem('categoryObject'))
+            let randomSpecie = new Specie (randomElement(storedSpecie))
+            liElement.textContent = await obtainClue(randomSpecie)
             break
         case selectedCategory === 'Starship':
-            const storedStarship = Object.values(new Starship (JSON.parse(localStorage.getItem('categoryObject'))))
-            liElement.textContent = storedStarship[randomClues(storedStarship)]
+            const storedStarship = JSON.parse(localStorage.getItem('categoryObject'))
+            let randomStarship = new Starship (randomElement(storedStarship))
+            liElement.textContent = await obtainClue(randomStarship)
             break
         case selectedCategory === 'Vehicle':
-            const storedVehicle = Object.values(new Vehicle (JSON.parse(localStorage.getItem('categoryObject'))))
-            liElement.textContent = storedVehicle[randomClues(storedVehicle)]
+            const storedVehicle = JSON.parse(localStorage.getItem('categoryObject'))
+            let randomVehicle = new Vehicle (randomElement(storedVehicle))
+            liElement.textContent = await obtainClue(randomVehicle)
             break
     }
 
-    listClues.appendChild(liElement)
+    listClues.appendChild(liElement);
+
 }
 
 showClues()
 
-function randomClues(type) {
-    return Math.floor(Math.random() * type.length + 1)
+function randomElement(type) {
+    let randomIndex = Math.floor(Math.random() * type.length)
+    let randomElement = type[randomIndex]
+    return randomElement
 }
 
+function randomClue(type) {
+    return Math.floor(Math.random() * type.length) + 1
+}
+
+async function obtainClue(elem) {
+
+    const elementArray = Object.values({...elem})
+    const randomValue = elementArray[randomClue(elementArray)]
+
+    if (elementArray instanceof Array && elementArray.length === 0){
+        return showClues()
+
+    } else if (randomValue instanceof Array && randomValue.length === 1) {
+        //get the link and find the value in the api
+        const sentence = randomValue[0]
+        const extractUrl = sentence.match(/https:\/\/\S+/)[0] // Obtener solo la URL coincidente
+        const newElem = await regularFetch(extractUrl)
+        const values = Object.values(newElem)
+        const firstValue = values[0]
+
+        //update sentence
+        const updatedElem = randomString.replace(/https:\/\/\S+/, firstValue)
+
+        console.log(sentence)
+        return updatedElem
+        
+    } else if (randomValue instanceof Array && randomValue.length > 1) {
+        const selectedElement = randomValue[randomClue(randomValue) - 1]
+    
+        const extractUrl = selectedElement.split(' ').find(element => element.startsWith('https://'))
+        const newElem = await regularFetch(extractUrl)
+        const values = Object.values(newElem)
+        const firstValue = values[0]
+
+        // update sentence
+        const updatedElem = selectedElement.replace(/https:\/\/\S+/, firstValue)
+            
+        return updatedElem
+
+    } else {
+        if (randomValue.length > 100) {
+            return randomValue.substring(0, 50) + '...';
+        } else {
+            return randomValue
+        }
+    }
+}
