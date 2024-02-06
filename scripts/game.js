@@ -89,29 +89,28 @@ function NavegationtoGamePlayScreen() {
         localStorage.setItem('selectedCategory', selectedCategory)
         localStorage.setItem('selectedDifficulty', selectedDifficulty)
         
-        switch (true) {
-            case selectedCategory === 'Film':
+        switch (selectedCategory) {
+            case 'Film':
                 const films = await fetchApi(filmsUrl)
                 localStorage.setItem('categoryObject', JSON.stringify(films))
-                console.log("FILMS")
                 break
-            case selectedCategory === 'Character':
+            case 'Character':
                 const people = await fetchApi(peopleUrl)
                 localStorage.setItem('categoryObject', JSON.stringify(people))
                 break
-            case selectedCategory === 'Planet':
+            case 'Planet':
                 const planets = await fetchApi(planetsUrl)
                 localStorage.setItem('categoryObject', JSON.stringify(planets))
                 break
-            case selectedCategory === 'Specie':
+            case 'Specie':
                 const species = await fetchApi(speciesUrl)
                 localStorage.setItem('categoryObject', JSON.stringify(species))
                 break
-            case selectedCategory === 'Starship':                    
+            case 'Starship':                    
                 const starships = await fetchApi(starshipsUrl)
                 localStorage.setItem('categoryObject', JSON.stringify(starships))
                 break
-            case selectedCategory === 'Vehicle':
+            case 'Vehicle':
                 const vehicles = await fetchApi(vechiclesUrl)
                 localStorage.setItem('categoryObject', JSON.stringify(vehicles))
                 break
