@@ -80,17 +80,25 @@ export function createStartBtn() {
 
 async function unblockButtons() {
 
+    //blockButtons and input
     btnSubmit.removeAttribute('disabled')
     input.removeAttribute('disabled')
     btnClues.removeAttribute('disabled')
+
     //remove the StarPlay button and start the countdown
     spanTime.removeChild(starPlay)
     countdown()
     
-    //show clues depend on the difficulty
+    //getArray of clues to guess
     const selectedElement = await selectRandomElement()
     localStorage.setItem("selectedElement", JSON.stringify(selectedElement))
+
+    //storage the solution
+    const solution = JSON.parse(localStorage.getItem("selectedElement"))
+    const obtainSolution = solution.name ? solution.name.split("was")[1] : solution.title.split("was")[1]
+    localStorage.setItem("solution", obtainSolution)
     
+    //show clues depend on the difficulty
     switch (selectedDifficulty) {
         case 'Begginer':
             showClues(selectedElement)

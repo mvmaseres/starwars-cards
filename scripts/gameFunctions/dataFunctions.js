@@ -67,6 +67,7 @@ function randomClue(type) {
 async function obtainClue(elem) {
     //returns array
     const elementArray = elem ? Object.keys(elem).map(key => elem[key]) : 0;
+    console.log(elementArray)
 
     //return randomElement of the array
     const randomValue = elementArray[randomClue(elementArray)]
