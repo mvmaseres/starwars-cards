@@ -1,5 +1,5 @@
 import { addHeaderAndFooter, addHeaderAndFooterLogout } from './templates.js'
-import { showCategoryDifficulty, resetGame, createStartBtn, blockButtons } from './gameFunctions/functions.js'
+import { showCategoryDifficulty, resetGame, createStartBtn, blockClueBtn, checkAnswer } from './gameFunctions/functions.js'
 import {showClues} from './gameFunctions/dataFunctions.js'
 
 if(localStorage.getItem("logged") === "true") {
@@ -21,7 +21,9 @@ btnClues.addEventListener('click', () => {
         attempts.textContent = attempts.textContent - 1
         showClues(JSON.parse(localStorage.getItem("selectedElement")))
     } else {
-        blockButtons()
+        blockClueBtn()
     }
     }
 )
+
+checkAnswer()

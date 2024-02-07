@@ -266,3 +266,37 @@ button:disabled {
     font-weight: bold;
 }
 
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    width: 35rem;
+    padding: 20px;
+    background-color: #333;
+    border: 4px solid black;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
+
+.popup h2 {
+    color: rgb(217, 62, 62);
+}
+.popup-content {
+    position: relative;
+    align-items: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: rgb(217, 62, 62);
+}

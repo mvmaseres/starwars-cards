@@ -3,6 +3,7 @@ import {showClues, selectRandomElement} from "./dataFunctions.js"
 const selectedCategory = localStorage.getItem('selectedCategory')
 const selectedDifficulty = localStorage.getItem('selectedDifficulty')
 
+//show messages to remember to choose category and difficulty
 export function showCategoryDifficulty() {
     const spanCategory = document.getElementById('cat-playing')
     const spanDifficulty = document.getElementById('mode-playing')
@@ -17,6 +18,7 @@ export function showCategoryDifficulty() {
     }
 }
 
+//reset values of the game in the localStorage and redirect to game screen
 export function resetGame() {
     const resetBtn = document.getElementById('reset')
 
@@ -32,14 +34,22 @@ export function resetGame() {
 
 const btnSubmit = document.getElementById('submit')
 const btnClues = document.getElementById('get-clues')
+const timeSpan = document.querySelector('span.time')
 
+let gameLost = false
+
+//start countdown (time less to guess)
 function countdown() {
-    const timeSpan = document.querySelector('span.time')
-
     //set the time to guess
     let timeInSeconds = 2 * 60
 
     const countdownInterval = setInterval(() => {
+
+        //if the game is ended, stop countdown
+        if (gameLost) {
+            clearInterval(countdownInterval)
+            return
+        }
         const minutes = Math.floor(timeInSeconds / 60)
         const seconds = timeInSeconds % 60
       
@@ -55,10 +65,10 @@ function countdown() {
           timeSpan.textContent = 'Time out!'
           timeSpan.classList.add('timeOut')
 
-          btnSubmit.disabled = true
-          btnClues.disabled = true
-          input.disabled = true
+          blockInputSubmitBtns()
+          blockClueBtn()
         }
+
       }, 1000)
 }
 
@@ -66,10 +76,8 @@ const input = document.getElementById('userInput')
 const spanTime = document.querySelector('span.time')
 const starPlay = document.createElement('button')
 
-
-
+//create the StartButton. When we click it, the game starts
 export function createStartBtn() {
-
     if (selectedCategory && selectedDifficulty) {
         //add button to stard the game
         starPlay.classList.add('pressToStart')
@@ -77,13 +85,14 @@ export function createStartBtn() {
         spanTime.appendChild(starPlay)
 
         //if we click to start the game
-        starPlay.addEventListener('click', unblockButtons)
+        starPlay.addEventListener('click', startingGame)
     } 
 }
 
-async function unblockButtons() {
+//unlock the buttons and get the clues and solution of the guess game
+async function startingGame() {
 
-    //blockButtons and input
+    //blockClueBtn and input
     btnSubmit.removeAttribute('disabled')
     input.removeAttribute('disabled')
     btnClues.removeAttribute('disabled')
@@ -99,7 +108,7 @@ async function unblockButtons() {
     //storage the solution
     const solution = JSON.parse(localStorage.getItem("selectedElement"))
     const obtainSolution = solution.name ? solution.name.split("was")[1] : solution.title.split("was")[1]
-    localStorage.setItem("solution", obtainSolution)
+    localStorage.setItem("solution", obtainSolution.trim())
     
     //show clues depend on the difficulty
     switch (selectedDifficulty) {
@@ -120,6 +129,47 @@ async function unblockButtons() {
 
 }
 
-export function blockButtons() {
+export function blockClueBtn() {
     btnClues.disabled = true
 }
+function blockInputSubmitBtns() {
+    btnSubmit.disabled = true
+    input.disabled = true
+}
+
+let attempts = document.getElementById('attempts')
+
+export function checkAnswer() {
+    btnSubmit.addEventListener('click', () => {
+
+        if (input.value.toLowerCase() === localStorage.getItem("solution").toLowerCase()) {
+            console.log("YOU WON")
+        } else {
+            if (attempts.textContent > 0) {
+                attempts.textContent = attempts.textContent - 1
+            } else {
+                lostGame()
+            }
+        }
+    })
+}
+
+function lostGame() {
+    document.getElementById('popup').style.display = 'block';
+    timeSpan.textContent = 'Oh no!'
+    timeSpan.classList.add('timeOut')
+
+    gameLost = true
+
+    blockInputSubmitBtns()
+    blockClueBtn()
+}
+const closeAdvice = document.querySelector('span.close-btn')
+closeAdvice.addEventListener('click', closePopup)
+
+// Función para cerrar el popup
+function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+    window.location.href = 'game.html'
+}
+
