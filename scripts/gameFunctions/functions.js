@@ -23,6 +23,9 @@ export function resetGame() {
     resetBtn.addEventListener('click', () => {
         localStorage.removeItem('selectedCategory')
         localStorage.removeItem('selectedDifficulty')
+        localStorage.removeItem('solution')
+        localStorage.removeItem('categoryObject')
+        localStorage.removeItem('selectedElement')
         window.location.href = 'game.html'
     })
 }
