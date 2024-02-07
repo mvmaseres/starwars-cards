@@ -1,5 +1,6 @@
 import { addHeaderAndFooter, addHeaderAndFooterLogout } from './templates.js'
 import { showCategoryDifficulty, resetGame, createStartBtn, blockClueBtn, checkAnswer } from './gameFunctions/functions.js'
+import { closeAdvices } from './gameFunctions/advices.js'
 import {showClues} from './gameFunctions/dataFunctions.js'
 
 if(localStorage.getItem("logged") === "true") {
@@ -27,3 +28,4 @@ btnClues.addEventListener('click', () => {
 )
 
 checkAnswer()
+closeAdvices()

@@ -1,7 +1,21 @@
 import {showClues, selectRandomElement} from "./dataFunctions.js"
+import {lostGame, wrongAnswer, wonGame, gameLost, gameWon } from "./advices.js"
 
 const selectedCategory = localStorage.getItem('selectedCategory')
 const selectedDifficulty = localStorage.getItem('selectedDifficulty')
+
+//buttons
+const btnClues = document.getElementById('get-clues')
+const starPlay = document.createElement('button')
+const btnSubmit = document.getElementById('submit')
+//input: the answer
+const input = document.getElementById('userInput')
+
+//spanTime
+const spanTime = document.querySelector('span.time')
+
+//div of attempts
+let attempts = document.getElementById('attempts')
 
 //show messages to remember to choose category and difficulty
 export function showCategoryDifficulty() {
@@ -32,12 +46,6 @@ export function resetGame() {
     })
 }
 
-const btnSubmit = document.getElementById('submit')
-const btnClues = document.getElementById('get-clues')
-const timeSpan = document.querySelector('span.time')
-
-let gameLost = false
-
 //start countdown (time less to guess)
 function countdown() {
     //set the time to guess
@@ -46,7 +54,7 @@ function countdown() {
     const countdownInterval = setInterval(() => {
 
         //if the game is ended, stop countdown
-        if (gameLost) {
+        if (gameLost || gameWon) {
             clearInterval(countdownInterval)
             return
         }
@@ -56,14 +64,14 @@ function countdown() {
         // get the format time
         const formattedTime = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`
       
-        timeSpan.textContent = formattedTime;
+        spanTime.textContent = formattedTime;
       
         timeInSeconds--
       
         if (timeInSeconds < 0) {
           clearInterval(countdownInterval)
-          timeSpan.textContent = 'Time out!'
-          timeSpan.classList.add('timeOut')
+          spanTime.textContent = 'Time out!'
+          spanTime.classList.add('timeOut')
 
           blockInputSubmitBtns()
           blockClueBtn()
@@ -71,10 +79,6 @@ function countdown() {
 
       }, 1000)
 }
-
-const input = document.getElementById('userInput')
-const spanTime = document.querySelector('span.time')
-const starPlay = document.createElement('button')
 
 //create the StartButton. When we click it, the game starts
 export function createStartBtn() {
@@ -132,18 +136,16 @@ async function startingGame() {
 export function blockClueBtn() {
     btnClues.disabled = true
 }
-function blockInputSubmitBtns() {
+export function blockInputSubmitBtns() {
     btnSubmit.disabled = true
     input.disabled = true
 }
-
-let attempts = document.getElementById('attempts')
 
 export function checkAnswer() {
     btnSubmit.addEventListener('click', () => {
 
         if (input.value.toLowerCase() === localStorage.getItem("solution").toLowerCase()) {
-            console.log("YOU WON")
+            wonGame()
         } else {
             if (attempts.textContent > 0) {
                 attempts.textContent = attempts.textContent - 1
@@ -153,36 +155,4 @@ export function checkAnswer() {
             }
         }
     })
-}
-
-function lostGame() {
-    document.getElementById('popupGameOver').style.display = 'block';
-    timeSpan.textContent = 'Oh no!'
-    timeSpan.classList.add('timeOut')
-
-    gameLost = true
-
-    blockInputSubmitBtns()
-    blockClueBtn()
-}
-const closeAdviceGameOver = document.querySelector('#popupGameOver span.close-btn')
-closeAdviceGameOver.addEventListener('click', () => {
-    closePopup('popupGameOver')
-})
-
-function wrongAnswer() {
-    document.getElementById('popupLostTry').style.display = 'block';
-}
-
-const closeAdviceWrongClue = document.querySelector('#popupLostTry span.close-btn')
-closeAdviceWrongClue.addEventListener('click', () =>{
-    closePopup('popupLostTry')
-})
-
-// Función para cerrar el popup
-function closePopup(id) {
-    document.getElementById(id).style.display = 'none';
-    if (attempts.textContent === 0) {
-        window.location.href = 'game.html'
-    }
 }
