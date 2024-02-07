@@ -1,4 +1,4 @@
-import showClues from "./dataFunctions.js"
+import {showClues, selectRandomElement} from "./dataFunctions.js"
 
 const selectedCategory = localStorage.getItem('selectedCategory')
 const selectedDifficulty = localStorage.getItem('selectedDifficulty')
@@ -30,7 +30,7 @@ export function resetGame() {
 const btnSubmit = document.getElementById('submit')
 const btnClues = document.getElementById('get-clues')
 
-export function countdown() {
+function countdown() {
     const timeSpan = document.querySelector('span.time')
 
     //set the time to guess
@@ -54,25 +54,61 @@ export function countdown() {
 
           btnSubmit.disabled = true
           btnClues.disabled = true
+          input.disabled = true
         }
       }, 1000)
 }
 
-export function blockButtons() {
-    const spanTime = document.querySelector('span.time')
-    const starPlay = document.createElement('button')
+const input = document.getElementById('userInput')
+const spanTime = document.querySelector('span.time')
+const starPlay = document.createElement('button')
+
+
+
+export function createStartBtn() {
 
     if (selectedCategory && selectedDifficulty) {
+        //add button to stard the game
         starPlay.classList.add('pressToStart')
         starPlay.textContent = 'Press to start'
         spanTime.appendChild(starPlay)
 
-        starPlay.addEventListener('click', () => {
-        btnSubmit.removeAttribute('disabled')
-        btnClues.removeAttribute('disabled')
-        spanTime.removeChild(starPlay)
-        countdown()
-        showClues()
-        })
+        //if we click to start the game
+        starPlay.addEventListener('click', unblockButtons)
     } 
+}
+
+async function unblockButtons() {
+
+    btnSubmit.removeAttribute('disabled')
+    input.removeAttribute('disabled')
+    btnClues.removeAttribute('disabled')
+    //remove the StarPlay button and start the countdown
+    spanTime.removeChild(starPlay)
+    countdown()
+    
+    //show clues depend on the difficulty
+    const selectedElement = await selectRandomElement()
+    localStorage.setItem("selectedElement", JSON.stringify(selectedElement))
+    
+    switch (selectedDifficulty) {
+        case 'Begginer':
+            showClues(selectedElement)
+            showClues(selectedElement)
+            showClues(selectedElement)
+            break
+        case 'Intermediate':
+            showClues(selectedElement)
+            showClues(selectedElement)
+            break
+        case 'Expert':
+            showClues(selectedElement)
+            break
+    }
+
+
+}
+
+export function blockButtons() {
+    btnClues.disabled = true
 }

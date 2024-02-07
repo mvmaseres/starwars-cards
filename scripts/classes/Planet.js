@@ -9,7 +9,7 @@ export default class Planet {
         this.terrain = `Its terrain is ${data.terrain}`
         this.surface_water = `Its surface water is ${data.surface_water}`
         this.population = `The population is ${data.population}`
-        this.residents = `${data.residents} resides on this planet`
-        this.films = `This planet appears in the film ${data.films}`
+        this.residents = Array.isArray(data.residents) ? data.residents.map(resident => `${resident} resides on this planet`) : []
+        this.films = Array.isArray(data.films) ? data.films.map(film => `This planet appears in the film ${film}`) : []
     }
 }

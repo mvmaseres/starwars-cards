@@ -1,6 +1,6 @@
 import { addHeaderAndFooter, addHeaderAndFooterLogout } from './templates.js'
-import { showCategoryDifficulty, resetGame, blockButtons } from './gameFunctions/functions.js'
-import showClues from './gameFunctions/dataFunctions.js'
+import { showCategoryDifficulty, resetGame, createStartBtn, blockButtons } from './gameFunctions/functions.js'
+import {showClues} from './gameFunctions/dataFunctions.js'
 
 if(localStorage.getItem("logged") === "true") {
     addHeaderAndFooterLogout()
@@ -10,10 +10,18 @@ if(localStorage.getItem("logged") === "true") {
 
 showCategoryDifficulty()
 resetGame()
-blockButtons()
+createStartBtn()
 
-const buttonClues = document.getElementById('get-clues')
+const btnClues = document.getElementById('get-clues')
+let attempts = document.getElementById('attempts')
 
-buttonClues.addEventListener('click', () =>
-    showClues()
+btnClues.addEventListener('click', () => {
+
+    if (attempts.textContent > 0) {
+        attempts.textContent = attempts.textContent - 1
+        showClues(JSON.parse(localStorage.getItem("selectedElement")))
+    } else {
+        blockButtons()
+    }
+    }
 )
