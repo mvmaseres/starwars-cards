@@ -132,7 +132,6 @@ div {
 #game-clues {
     width: 250px; 
     word-wrap: break-word;
-    text-align: justify;
     align-items: center;
 }
 
