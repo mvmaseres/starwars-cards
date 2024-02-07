@@ -147,6 +147,7 @@ export function checkAnswer() {
         } else {
             if (attempts.textContent > 0) {
                 attempts.textContent = attempts.textContent - 1
+                wrongAnswer()
             } else {
                 lostGame()
             }
@@ -155,7 +156,7 @@ export function checkAnswer() {
 }
 
 function lostGame() {
-    document.getElementById('popup').style.display = 'block';
+    document.getElementById('popupGameOver').style.display = 'block';
     timeSpan.textContent = 'Oh no!'
     timeSpan.classList.add('timeOut')
 
@@ -164,12 +165,24 @@ function lostGame() {
     blockInputSubmitBtns()
     blockClueBtn()
 }
-const closeAdvice = document.querySelector('span.close-btn')
-closeAdvice.addEventListener('click', closePopup)
+const closeAdviceGameOver = document.querySelector('#popupGameOver span.close-btn')
+closeAdviceGameOver.addEventListener('click', () => {
+    closePopup('popupGameOver')
+})
 
-// Función para cerrar el popup
-function closePopup() {
-    document.getElementById('popup').style.display = 'none';
-    window.location.href = 'game.html'
+function wrongAnswer() {
+    document.getElementById('popupLostTry').style.display = 'block';
 }
 
+const closeAdviceWrongClue = document.querySelector('#popupLostTry span.close-btn')
+closeAdviceWrongClue.addEventListener('click', () =>{
+    closePopup('popupLostTry')
+})
+
+// Función para cerrar el popup
+function closePopup(id) {
+    document.getElementById(id).style.display = 'none';
+    if (attempts.textContent === 0) {
+        window.location.href = 'game.html'
+    }
+}
