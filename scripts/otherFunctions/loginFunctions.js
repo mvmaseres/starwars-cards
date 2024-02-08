@@ -15,6 +15,12 @@ export default function authenticate() {
 
         //Check the user and password. Just a one valid option
         if (username === 'demo1' && password === 'demo100') {
+
+            const WonCards = []
+
+            if (!localStorage.getItem("wonCards")) {
+                localStorage.setItem("wonCards", JSON.stringify(WonCards))
+            }
             
             //remove the login form
             loginDiv.classList.add('hide')
@@ -41,4 +47,15 @@ export default function authenticate() {
         }
 })
     
+}
+
+export function storageWonCards() {
+    const wonCards = JSON.parse(localStorage.getItem("wonCards"))
+    const newCard = localStorage.getItem("solution")
+
+    if(!wonCards.includes(newCard)){
+        wonCards.push(newCard)
+        localStorage.setItem("wonCards", JSON.stringify(wonCards))
+    }
+
 }

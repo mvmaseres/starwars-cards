@@ -1,10 +1,21 @@
 import { addHeaderAndFooter, addHeaderAndFooterLogout} from './templates.js'
-import {showCardsCollection} from './otherFunctions/cardsCollection.js'
+import {showCardsCollection, unlockWonCards, blockAllCards } from './otherFunctions/cardsCollection.js'
+
+document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("principal").style.display = "block";
+    }, 400);
+});
+
 
 if(localStorage.getItem("logged") === "true") {
+    await showCardsCollection()
     addHeaderAndFooterLogout()
+    blockAllCards()
+    unlockWonCards()
 }  else if (localStorage.getItem("logged") === "false") {
+    await showCardsCollection()
     addHeaderAndFooter()
+    blockAllCards()
 }
-
-showCardsCollection()
