@@ -1,5 +1,5 @@
 import { addHeaderAndFooter, addHeaderAndFooterLogout} from './templates.js'
-import {showCardsCollection, unlockWonCards, blockAllCards } from './otherFunctions/cardsCollection.js'
+import {showCardsCollection, unlockWonCards, blockAllCards, navegationToGame, updatePSpan } from './otherFunctions/cardsCollection.js'
 
 document.addEventListener("DOMContentLoaded", function() {
     setTimeout(function() {
@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
 if(localStorage.getItem("logged") === "true") {
     await showCardsCollection()
     addHeaderAndFooterLogout()
+    updatePSpan()
     blockAllCards()
     unlockWonCards()
 }  else if (localStorage.getItem("logged") === "false") {
@@ -19,3 +20,5 @@ if(localStorage.getItem("logged") === "true") {
     addHeaderAndFooter()
     blockAllCards()
 }
+
+navegationToGame()
