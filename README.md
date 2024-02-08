@@ -8,7 +8,7 @@ The game offers several guessing options, allowing users to choose from StarWars
 The game features three difficulty modes:
 - Beginner
 - Intermediate
-- Advanced
+- Expert
 
 Each game mode provides a different challenge, increasing complexity and fun. In addition, players will have a limited number of attempts to correctly guess the answer.
 
