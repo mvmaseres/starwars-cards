@@ -179,12 +179,13 @@ section#tries #attempts {
     border-radius: 10px;
     background-color: #2C2B2C;
     display: flex;
-    align-items: center;
+    justify-content: center;
     position: relative;
     overflow: hidden;
 }
 
 #answer img {
+    height: 100%;
     width: 100%;
 }
 

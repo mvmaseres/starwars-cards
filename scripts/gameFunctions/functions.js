@@ -1,5 +1,7 @@
 import {showClues, selectRandomElement} from "./dataFunctions.js"
 import {lostGame, wrongAnswer, wonGame, gameLost, gameWon } from "./advices.js"
+import { photosGame } from '../data/photos.js'
+
 
 const selectedCategory = localStorage.getItem('selectedCategory')
 const selectedDifficulty = localStorage.getItem('selectedDifficulty')
@@ -16,6 +18,9 @@ const spanTime = document.querySelector('span.time')
 
 //div of attempts
 let attempts = document.getElementById('attempts')
+
+//get the img of the card
+const theImg = document.querySelector('div.unknown img')
 
 //show messages to remember to choose category and difficulty
 export function showCategoryDifficulty() {
@@ -144,8 +149,15 @@ export function blockInputSubmitBtns() {
 export function checkAnswer() {
     btnSubmit.addEventListener('click', () => {
 
+        // const img = photosGame[0].url
+        const url = photosGame.filter(obj => obj.name === localStorage.getItem("solution"))
+                                .map(obj => obj.url)[0]
+
+
         if (input.value.toLowerCase() === localStorage.getItem("solution").toLowerCase()) {
             wonGame()
+            theImg.src = url
+
         } else {
             if (attempts.textContent > 0) {
                 attempts.textContent = attempts.textContent - 1

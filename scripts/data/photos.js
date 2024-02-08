@@ -1,4 +1,4 @@
-const photosGame = [
+export const photosGame = [
     {name: "A New Hope", url: "https://m.media-amazon.com/images/I/91H91NbI2xL._AC_UF894,1000_QL80_.jpg"},
     {name: "The Empire Strikes Back", url: "https://m.media-amazon.com/images/M/MV5BYmU1NDRjNDgtMzhiMi00NjZmLTg5NGItZDNiZjU5NTU4OTE0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg"},
     {name: "Return of the Jedi", url: "https://m.media-amazon.com/images/I/617CD+sLC-L._AC_UF1000,1000_QL80_.jpg"},
@@ -47,7 +47,7 @@ const photosGame = [
     {name: "Rebel transport", url: "https://static.wikia.nocookie.net/starwars/images/b/be/GR-75_transport_SWGTCG.jpg/revision/latest?cb=20130911163358"},
     {name: "Luke Skywalker", url: "https://i.pinimg.com/474x/9e/af/0f/9eaf0fb7905b24a030c8db77f6a3bd17.jpg"},
     {name: "C-3PO", url: "https://toystnt.com/pictures/3b0d3e2740ccf728169dcdfedbbfecec.jpg"},
-    {name: "R2-D2", url: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/R2-D2_-_Genuine_Movie_Star.jpg/1200px-R2-D2_-_Genuine_Movie_Star.jpg"},
+    {name: "R2-D2", url: "https://www.singulart.com/images/artworks/v2/cropped/5877/main/zoom/713867_6ed990ab826a4975c232711091e55cdc.jpeg"},
     {name: "Darth Vader", url: "https://www.mundodeportivo.com/alfabeta/hero/2023/10/darth-vader-enfadado-star-wars.jpg?width=1200"},
     {name: "Leia Organa", url: "https://www.lavanguardia.com/files/og_thumbnail/uploads/2017/12/08/5fa3d8e24f841.jpeg"},
     {name: "Owen Lars", url: "https://static.wikia.nocookie.net/esstarwars/images/8/81/Owen-OP.jpg/revision/latest?cb=20200719210622"},
