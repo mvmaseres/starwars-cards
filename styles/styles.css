@@ -3,24 +3,25 @@
 
 /* Color pallete: 
 
-Tricorn black: #2C2B2C
-Extra white: #EDEEE9
-Rookwood dark: #492728
-Bitter chocolate: #50433f
 Denim:#6F8FAF
-
 */
+
+:root {
+    --grey-swars: #2C2B2C;
+    --darkgrey-swars: #333;
+    --extrawhite: #EDEEE9;
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #EDEEE9;
+    color: var(--extrawhite);
     font-family: 'Poppins', sans-serif;
 }
 
 html {
-    background-color: #2C2B2C;
+    background-color: var(--grey-swars);
 }
 
 main {
@@ -35,10 +36,10 @@ main {
     width: 100%;
     font-size: 2rem;
     font-weight: bolder;
-    color: white;
+    color: var(--extrawhite);
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
-    background-color: #333; 
+    background-color: var(--darkgrey-swars); 
 }
 
 .logo {
@@ -161,16 +162,16 @@ main {
 .explication-divs button {
     width: 13rem;
     height: 2.5rem;
-    background-color: #EDEEE9;
-    color: #2C2B2C;
-    border: 3px solid #2C2B2C;
+    background-color: var(--extrawhite);
+    color: var(--grey-swars);
+    border: 3px solid var(--grey-swars);
     font-size: 1rem;
     border-radius: 16px;
     margin-top: 1rem;
 }
 
 .explication-divs button:hover {
-    background-color: #edeee99b;
+    background-color: rgba(var(--extrawhite), 0.61);
     cursor: pointer;
 }
 
@@ -181,22 +182,8 @@ main {
                         /*FOOTER*/
 .footer{
     margin-top: 2rem;
-    background-color: #333; 
+    background-color: var(--darkgrey-swars); 
     padding: 10px;
     text-align: center;
     font-size: 14px; 
-}
- 
-
-                       
-@media screen and (max-width: 800px){
-    .forms{
-        flex-wrap: wrap;
-
-    }
-
-    .form{
-        column-gap: none;
-        margin-bottom: 30px;
-    }
 }
