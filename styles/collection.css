@@ -90,3 +90,59 @@ main {
     font-size: 14px; 
 }
  
+#principal {
+    display: flex;
+    flex-direction: column;
+    margin: 0.25em auto;
+    width: 90%;
+}
+
+#principal h1 {
+    margin-top: 1rem;
+    text-align: justify;
+    font-size: 2em;
+    font-weight: 600;
+    color: #EDEEE9;
+}
+
+#principal button {
+    width: 20%;
+    height: 40px;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #EDEEE9;
+    border: 1px solid #EDEEE9;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+div.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+section.cards h2 {
+    margin-top: 0.75rem;
+}
+
+div.card{
+    width: 175px;
+    height: 250px;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: #2C2B2C;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    /* filter: grayscale(100%); */
+}
+
+.card-container img {
+    height: 100%;
+}
+
+

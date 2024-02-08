@@ -148,9 +148,11 @@ export function blockInputSubmitBtns() {
 
 export function checkAnswer() {
     btnSubmit.addEventListener('click', () => {
+        const category = selectedCategory.toLowerCase()
 
-        const url = photosGame.filter(obj => obj.name === localStorage.getItem("solution"))
-                                .map(obj => obj.url)[0]
+        const url = photosGame[category]
+                            .filter(obj => obj.name === localStorage.getItem("solution"))
+                            .map(obj => obj.url)[0]
 
 
         if (input.value.toLowerCase() === localStorage.getItem("solution").toLowerCase()) {
