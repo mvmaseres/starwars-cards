@@ -1,4 +1,4 @@
-import { regularFetch } from '../api.js'
+import { regularFetch } from '../data/api.js'
 import Film from '../classes/Film.js'
 import People from '../classes/People.js'
 import Planet from '../classes/Planet.js'

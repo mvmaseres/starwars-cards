@@ -1,5 +1,5 @@
 import { addHeaderAndFooter, addHeaderAndFooterLogout } from './templates.js'
-import { filmsUrl, peopleUrl, planetsUrl, speciesUrl, starshipsUrl, vechiclesUrl, fetchApi} from './api.js'
+import { filmsUrl, peopleUrl, planetsUrl, speciesUrl, starshipsUrl, vechiclesUrl, fetchApi} from './data/api.js'
 
 if(localStorage.getItem("logged") === "true") {
     addHeaderAndFooterLogout()
