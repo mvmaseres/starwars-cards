@@ -149,7 +149,6 @@ export function blockInputSubmitBtns() {
 export function checkAnswer() {
     btnSubmit.addEventListener('click', () => {
 
-        // const img = photosGame[0].url
         const url = photosGame.filter(obj => obj.name === localStorage.getItem("solution"))
                                 .map(obj => obj.url)[0]
 
@@ -157,6 +156,10 @@ export function checkAnswer() {
         if (input.value.toLowerCase() === localStorage.getItem("solution").toLowerCase()) {
             wonGame()
             theImg.src = url
+
+            if (theImg.clientWidth < theImg.naturalWidth) {
+                theImg.style.width = '100%'
+            }
 
         } else {
             if (attempts.textContent > 0) {
