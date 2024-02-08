@@ -1,5 +1,5 @@
-import { addHeaderAndFooter, addHeaderAndFooterLogout, addCardsToCollection } from './templates.js'
-import { photosGame } from './data/photos.js'
+import { addHeaderAndFooter, addHeaderAndFooterLogout} from './templates.js'
+import {showCardsCollection} from './otherFunctions/cardsCollection.js'
 
 if(localStorage.getItem("logged") === "true") {
     addHeaderAndFooterLogout()
@@ -7,3 +7,4 @@ if(localStorage.getItem("logged") === "true") {
     addHeaderAndFooter()
 }
 
+showCardsCollection()

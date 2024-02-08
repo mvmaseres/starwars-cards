@@ -41,7 +41,7 @@ export async function addHeaderAndFooterLogout() {
 })
 }
 
-export async function addCardsToCollection(id ,src, alt) {
+export async function createDivCard(id ,src, alt) {
     const response = await fetch('templates.html')
 
     if (!response.ok) {
@@ -55,6 +55,6 @@ export async function addCardsToCollection(id ,src, alt) {
     const divCard = templates.content.querySelector('#collection-cards').content
     const img = divCard.querySelector('img')
     img.src = `${src}`
-    img.src = `${alt}`
+    img.alt = `${alt}`
     document.querySelector(`#${id} .card-container`).appendChild(divCard)
 }
