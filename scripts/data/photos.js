@@ -44,7 +44,7 @@ export const photosGame = {
         {name: "Sail barge", url: "https://i.pinimg.com/736x/d4/d6/16/d4d6166347cbcac52b49a40752608ca4.jpg"}
     ],
     starship: [
-        {name: "CR90 corvette", url: "https://lh3.googleusercontent.com/proxy/wSe3_5tztEGpHiVuWvflF3yIIs3ZhGkjcJDhAgfI4no0lx89zmsXHwCh9_U-VfpPc_e0Y2OI1FNWL9ghNL8HyT2DvceZ7zG2n-jzvUNJHggH-3WKbLdQ1TnSEBE"},
+        {name: "CR90 corvette", url: "https://spikeybits.com/wp-content/uploads/2019/03/anthony-devine-star-wars-all-fighters-follow-me-by-anthonydevine.jpg"},
         {name: "Star Destroyer", url: "https://sacredicon.files.wordpress.com/2020/01/stardestroyers-e1579963906701.jpg?w=1200"},
         {name: "Sentinel-class landing craft", url: "https://fractalsponge.net/wp/wp-content/uploads/2022/02/sentinel2-scaled.jpg"},
         {name: "Death Star", url: "https://lumiere-a.akamaihd.net/v1/images/Death-Star-I-copy_36ad2500.jpeg?region=0%2C0%2C1600%2C900"},
