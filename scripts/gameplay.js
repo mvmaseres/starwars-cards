@@ -5,7 +5,7 @@ import {showClues} from './gameFunctions/dataFunctions.js'
 
 if(localStorage.getItem("logged") === "true") {
     addHeaderAndFooterLogout()
-}  else if (localStorage.getItem("logged") === "false") {
+}  else {
     addHeaderAndFooter()
 }
 

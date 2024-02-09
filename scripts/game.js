@@ -3,7 +3,7 @@ import { filmsUrl, peopleUrl, planetsUrl, speciesUrl, starshipsUrl, vechiclesUrl
 
 if(localStorage.getItem("logged") === "true") {
     addHeaderAndFooterLogout()
-}  else if (localStorage.getItem("logged") === "false") {
+}  else {
     addHeaderAndFooter()
 }
 

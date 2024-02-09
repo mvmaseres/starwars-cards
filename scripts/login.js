@@ -3,7 +3,7 @@ import authenticate from './CollectionLoginFunctions/loginFunctions.js'
 
 if(localStorage.getItem("logged") === "true") {
     addHeaderAndFooterLogout()
-}  else if (localStorage.getItem("logged") === "false") {
+}  else {
     addHeaderAndFooter()
 }
 

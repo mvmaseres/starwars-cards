@@ -15,7 +15,7 @@ if(localStorage.getItem("logged") === "true") {
     updatePSpan()
     blockAllCards()
     unlockWonCards()
-}  else if (localStorage.getItem("logged") === "false") {
+}  else {
     await showCardsCollection()
     addHeaderAndFooter()
     blockAllCards()
