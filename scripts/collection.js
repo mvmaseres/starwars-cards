@@ -1,5 +1,5 @@
 import { addHeaderAndFooter, addHeaderAndFooterLogout} from './templates.js'
-import {showCardsCollection, unlockWonCards, blockAllCards, navegationToGame, updatePSpan } from './otherFunctions/cardsCollection.js'
+import {showCardsCollection, unlockWonCards, blockAllCards, navegationToGame, updatePSpan } from './CollectionLoginFunctions/cardsCollection.js'
 
 document.addEventListener("DOMContentLoaded", function() {
     setTimeout(function() {

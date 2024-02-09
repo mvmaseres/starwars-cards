@@ -1,5 +1,5 @@
 import { addHeaderAndFooter, addHeaderAndFooterLogout } from './templates.js'
-import authenticate from './otherFunctions/loginFunctions.js'
+import authenticate from './CollectionLoginFunctions/loginFunctions.js'
 
 if(localStorage.getItem("logged") === "true") {
     addHeaderAndFooterLogout()

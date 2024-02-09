@@ -1,7 +1,7 @@
 import {showClues, selectRandomElement} from "./dataFunctions.js"
 import {lostGame, wrongAnswer, wonGame, gameLost, gameWon } from "./advices.js"
 import { photosGame } from '../data/photos.js'
-import {storageWonCards} from '../otherFunctions/loginFunctions.js'
+import {storageWonCards} from '../CollectionLoginFunctions/loginFunctions.js'
 
 
 const selectedCategory = localStorage.getItem('selectedCategory')
