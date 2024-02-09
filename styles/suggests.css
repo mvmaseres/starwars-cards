@@ -118,8 +118,9 @@ form#suggests{
 }
 
 #questions-suggest textarea{
+    padding: 0.25rem;
     color: black;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 #suggest-page form fieldset {
