@@ -186,3 +186,37 @@ div#form-posted {
     width: 70%;
     height: 30rem;
 }
+
+@media only screen and (max-width: 1000px) {
+
+    .header {
+        font-size: 1.5rem;
+    }
+    
+    .header nav {
+        flex: 0 0 100%;
+    }
+
+    div.logo {
+        display: none;
+    }
+
+    #suggest-page form fieldset {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #suggest-form {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 1300px) {  
+    form fieldset img {
+        display: none;
+    }
+
+    button#suggest-form {
+        width: 20%;
+    }
+}

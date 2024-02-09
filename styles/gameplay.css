@@ -299,3 +299,18 @@ button:disabled {
 .close-btn:hover {
     color: rgb(217, 62, 62);
 }
+
+@media only screen and (max-width: 1000px) {
+
+    .header {
+        font-size: 1.5rem;
+    }
+    
+    .header nav {
+        flex: 0 0 100%;
+    }
+
+    div.logo {
+        display: none;
+    }
+}

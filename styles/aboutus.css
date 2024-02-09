@@ -132,10 +132,19 @@ main {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background-color: #2C2B2C;
+    width: 100%;
+    padding: 2rem;
+}
+
+.technology-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 #technologies div label{
-    padding: 1rem;
+    padding: 0.5rem;
 }
 
 #technologies div label i {
@@ -156,16 +165,17 @@ main {
 
 #api-info div.content {
     display: flex;
+    height: auto;
 }
 
 #api-info img {
-    width: 40%;
-    padding-right: 1rem;
+    width: 100%; 
+    padding-right: 0;
 }
 
 #about-us-page #improvments p,
 #about-us-page #challenges p{
-    width: 60%;
+    width: 100%;
 }
 
 #purpose{
@@ -200,4 +210,38 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .header {
+        font-size: 1.5rem;
+    }
+    
+    .header nav {
+        flex: 0 0 100%;
+    }
+
+    div.logo {
+        display: none;
+    }
+
+    .about-project h1 {
+        padding: 0 1.5rem; 
+    }
+
+    .pre-title,
+    .text-about {
+        padding: 1rem; 
+    }
+
+    .line-about {
+        margin: 1rem 0 2rem;
+    }
+
+    #api-info.about-project {
+        height: auto; 
+        padding: 1rem; 
+        max-height: none;
+    }
 }

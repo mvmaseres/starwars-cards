@@ -251,3 +251,18 @@ form .field {
     from { transform: rotate(0turn) }
     to {transform: rotate(1turn);}
 }
+
+@media only screen and (max-width: 1000px) {
+
+    .header {
+        font-size: 1.5rem;
+    }
+    
+    .header nav {
+        flex: 0 0 100%;
+    }
+
+    div.logo {
+        display: none;
+    }
+}

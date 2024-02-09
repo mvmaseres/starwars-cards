@@ -187,3 +187,27 @@ main {
     text-align: center;
     font-size: 14px; 
 }
+
+@media only screen and (max-width: 1000px) {
+
+    .header {
+        font-size: 1.5rem;
+    }
+    
+    .header nav {
+        flex: 0 0 100%;
+    }
+
+    div.logo {
+        display: none;
+    }
+    
+    .home-divs {
+        flex-direction: column;
+    }
+    
+    .img-divs,
+    .explication-divs {
+        width: 100%;
+    }
+}
