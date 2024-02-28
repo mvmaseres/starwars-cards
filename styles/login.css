@@ -1,33 +1,24 @@
 /* Google Fonts - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-/* Color pallete: 
-
-Tricorn black: #2C2B2C
-Extra white: #EDEEE9
-Rookwood dark: #492728
-Bitter chocolate: #50433f
-Denim:#6F8FAF
-
-*/
-
 :root {
     --grey-swars: #2C2B2C;
     --darkgrey-swars: #333;
     --extrawhite: #EDEEE9;
     --yellow-swars: #dcc91d;
+    --blue-denim: #6F8FAF;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #EDEEE9;
+    color: var(--extrawhite);
     font-family: 'Poppins', sans-serif;
 }
 
 html {
-    background-color: #2C2B2C;
+    background-color: var(--grey-swars);
 }
 
 main {
@@ -98,18 +89,17 @@ main {
 
 /*#endregion */
 
-                        /*FOOTER*/
+/*#region Footer ------------------------------------------------------------------------------- */
 .footer{
     margin-top: 2rem;
-    background-color: #333; 
+    background-color: var(--darkgrey-swars); 
     padding: 10px;
     text-align: center;
     font-size: 14px; 
 }
- 
+/*#endregion*/
 
- /* LOG IN / SIGN IN SCREEN */
-
+/*#region General ------------------------------------------------------------------------------- */
  #login-page{
     display: flex;
     flex-direction: column;
@@ -117,34 +107,43 @@ main {
 }
 
 #login-page h1#title{
-    display: flex;
-    justify-content: center;
     margin: 2rem;
 }
 
-#login-page .form {
-    display: flex;
-    flex-direction: column;
+.hide {
+    display: none !important;
 }
 
+/*#endregion*/
+
+/*#region General Form --------------------------------------------------------------------------- */
 .form {
+    flex-direction: column;
     max-width: 430px;
     width: 100%;
     padding: 30px;
     border-radius: 20px;
     background-image: url(https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixlib=rb-4.0.3);
     background-size: cover;
-    border: 1px solid #EDEEE9;
+    border: 1px solid var(--extrawhite);
 }
 
-.form h1 {
-    font-size: 36px;
-    font-weight: 600;
-    color: #EDEEE9; 
+.form h2 {
+    color: var(--extrawhite); 
     text-align: center;
     margin: 0;
 }
 
+.form-link {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/*#endregion*/
+
+/*#region Button and Input ---------------------------------------------------------------------- */
 form .field {
     position: relative;
     height: 50px;
@@ -161,17 +160,13 @@ form .field {
     font-size: 16px;
     font-weight: 400;
     border-radius: 6px;
-    color: #2C2B2C;
+    color: var(--grey-swars);
 }
 
 .field input {
     outline: none;
     padding: 0 15px;
-    border: 1px solid #6F8FAF;
-}
-
-.field input:focus{
-    border-bottom-width: 2px;
+    border: 1px solid var(--blue-denim);
 }
 
 .eye-icon{
@@ -180,14 +175,14 @@ form .field {
     right: 10px;
     transform: translateY(-50%);
     font-size: 18px;
-    color: #6F8FAF;
+    color: var(--blue-denim);
     cursor: pointer;
     padding: 5px;
 }
 
 .field button{
-    color: #EDEEE9;
-    background-color: #6F8FAF;
+    color: var(--extrawhite);
+    background-color: var(--blue-denim);
     transition: all 0.3s ease;
     cursor: pointer;
 }
@@ -196,13 +191,9 @@ form .field {
     background-color: #98aabc;
 }
 
-.form-link {
-    text-align: center;
-    margin-top: 10px;
-    font-size: 14px;
-    font-weight: 400;
-}
+/*#endregion*/
 
+/*#region Demo datails -------------------------------------------------------------------------- */
 #demo-login {
     display: flex;
     flex-direction: column;
@@ -211,18 +202,17 @@ form .field {
     margin: 1rem;
     padding: 0.2rem;
     font-size: 16px;
-    border: 1px solid #EDEEE9;
+    border: 1px solid var(--extrawhite);
     background-color: rgba(255, 255, 255, 0.121);
 }
 
 #demo-login strong {
-    color: #6F8FAF;
+    color: var(--blue-denim);
 }
 
-.hide {
-    display: none !important;
-}
+/*#endregion*/
 
+/*#region Logged Message ------------------------------------------------------------------------- */
 #message-container {
     max-width: 430px;
     width: 100%;
@@ -230,20 +220,7 @@ form .field {
     border-radius: 20px;
     background-image: url(https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixlib=rb-4.0.3);
     background-size: cover;
-    border: 1px solid #EDEEE9;
-}
-
-#wrong-container {
-    display: flex;
-    justify-content: center;
-    padding-top: 0.5rem;
-}
-
-#wrong-container p{
-    font-size: 20px;
-    color: rgb(217, 62, 62);
-    align-items: center;
-    font-weight: bold;
+    border: 1px solid var(--extrawhite);
 }
 
 #loading-spinner{
@@ -258,11 +235,29 @@ form .field {
     content: "";
     width: 45px;
     height: 45px;
-    border: 15px solid #EDEEE9;
+    border: 15px solid var(--extrawhite);
     border-top-color: rgba(255, 255, 255, 0.121);
     border-radius: 50%;
     animation: loading 1s ease infinite;
 }
+
+/*#endregion*/
+
+/*#region Wrong Password ---------------------------------------------------------------------- */
+#wrong-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 0.5rem;
+}
+
+#wrong-container p{
+    font-size: 20px;
+    color: rgb(217, 62, 62);
+    align-items: center;
+    font-weight: bold;
+}
+ /*#endregion*/
+
 
 @keyframes loading {
     from { transform: rotate(0turn) }
@@ -281,5 +276,14 @@ form .field {
 
     div.logo {
         display: none;
+    }
+
+    #login-page h1#title{
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .form h2 {
+        font-size: 1.75rem;
     }
 }
