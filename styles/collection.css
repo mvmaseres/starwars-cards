@@ -1,16 +1,6 @@
 /* Google Fonts - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-/* Color pallete: 
-
-Tricorn black: #2C2B2C
-Extra white: #EDEEE9
-Rookwood dark: #492728
-Bitter chocolate: #50433f
-Denim:#6F8FAF
-
-*/
-
 :root {
     --grey-swars: #2C2B2C;
     --darkgrey-swars: #333;
@@ -98,7 +88,7 @@ main {
 
 /*#endregion */
 
-                        /*FOOTER*/
+/*#region Footer ------------------------------------------------------------------------------- */
 .footer{
     margin-top: 2rem;
     background-color: #333; 
@@ -106,7 +96,9 @@ main {
     text-align: center;
     font-size: 14px; 
 }
+/*#endregion*/
 
+/*#region Loader ------------------------------------------------------------------------------- */
 #loader {
     position: fixed;
     top: 0;
@@ -124,48 +116,31 @@ main {
     color: #333;
 }
 
+/*#endregion*/
+
+/*#region General ------------------------------------------------------------------------------- */
+
 #principal {
     display: none;
-    flex-direction: column;
     margin: 0.25em auto;
-    width: 90%;
+    width: 85%;
 }
 
 #principal h1 {
     margin-top: 1rem;
-    text-align: justify;
     font-size: 2em;
-    font-weight: 600;
-    color: #EDEEE9;
-}
-
-#btndiv {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-}
-
-#principal button {
-    width: 20%;
-    height: 40px;
-    color: black;
-    font-size: 1.5rem;
-    font-weight: bold;
-    background-color: #EDEEE9;
-    border: 1px solid #EDEEE9;
-    border-radius: 1rem;
-    cursor: pointer;
+    color: var(--yellow-swars);
 }
 
 div.card-container {
     display: flex;
-    flex-wrap: wrap;
     flex-wrap: wrap;
     gap: 10px;
 }
 
 section.cards h2 {
     margin-top: 0.75rem;
+    color: var(--yellow-swars);
 }
 
 div.card{
@@ -178,12 +153,38 @@ div.card{
     justify-content: center;
     position: relative;
     overflow: hidden;
-    /* filter: grayscale(100%); */
 }
 
 .card-container img {
     height: 100%;
 }
+
+/*#endregion*/
+
+/*#region Button ------------------------------------------------------------------------------- */
+#btndiv {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+#principal button {
+    width: 190px;
+    height: 40px;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #EDEEE9;
+    border: 1px solid #EDEEE9;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+#principal button:hover {
+    background-color: var(--yellow-swars);
+}
+
+/*#endregion*/
 
 
 @media only screen and (max-width: 1000px) {
@@ -200,4 +201,25 @@ div.card{
         display: none;
     }
 
+}
+
+@media only screen and (max-width: 800px){
+
+    #principal h1 {
+        font-size: 1.5em;
+    }
+
+    #principal span {
+        font-size: 1em;
+    }
+
+    section.cards h2 {
+        font-size: 1.2em;
+    }
+    
+
+    div.card{
+        width: 120px;
+        height: 170px;
+    }
 }
