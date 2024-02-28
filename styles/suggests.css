@@ -10,6 +10,12 @@ Bitter chocolate: #50433f
 Denim:#6F8FAF
 
 */
+:root {
+    --grey-swars: #2C2B2C;
+    --darkgrey-swars: #333;
+    --extrawhite: #EDEEE9;
+    --yellow-swars: #dcc91d;
+}
 
 * {
     margin: 0;
@@ -31,26 +37,29 @@ main {
 
 .header {
     display: flex;
+    justify-content: center;
     width: 100%;
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: bolder;
-    color: white;
+    color: var(--extrawhite);
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
-    background-color: #333; 
+    background-color: var(--darkgrey-swars); 
 }
 
 .logo {
-    width: 9%;
-    display: flex;
-    justify-content: center;
-    margin-right: 8rem;
-    margin-left: 2rem;
     margin-top: 0.5rem;
 }
 
+.logo a {
+    display: block;
+    text-align: center;
+
+}
+
 .header a img {
-    max-width: 100%;
+    max-width: 50%;
+    max-height: 100px;
 }
 
                 /* NAV */
@@ -58,7 +67,7 @@ main {
 .header nav {
     flex: 0 0 75%;
     display: flex;
-    align-items: center; 
+    align-self: center; 
     justify-content: center; 
 }
 
@@ -80,6 +89,11 @@ main {
     color: inherit;
     cursor: pointer;
 } 
+
+.header li a:hover {
+    color: var(--yellow-swars);
+    font-size: 1.80rem;
+}
 
                         /*FOOTER*/
 .footer{
