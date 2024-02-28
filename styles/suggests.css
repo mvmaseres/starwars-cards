@@ -89,7 +89,7 @@ main {
 /*#endregion */
 
 
-                        /*FOOTER*/
+/*#region Footer--------------------------------------------------------------------------------*/
 .footer{
     margin-top: 2rem;
     background-color: #333; 
@@ -97,69 +97,91 @@ main {
     text-align: center;
     font-size: 14px; 
 }
+
+/*#endregion*/
  
 
-                        /* SEND YOUR COMMENTS */
-#suggest-page h1 {
-    padding: 1rem;
-}
-
+/*#region Form--------------------------------------------------------------------------------------*/
 #suggest-page{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#suggest-page h1{
+#suggest-page h1 {
     margin-top: 1rem;
+    padding: 1rem;
+    font-size: 2.5rem;
 }
 
 form#suggests{
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    
 }
 
 #questions-suggest{
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+}
+
+#questions-suggest div {
+    margin-bottom: 0.75rem;
+    align-self: center;
+}
+
+#questions-suggest label {
+    font-weight: 500;
+    background-color: black;
 }
 
 #questions-suggest textarea{
     padding: 0.25rem;
     color: black;
     font-size: 1rem;
+    width: 700px;
+    height: 200px;
 }
 
 #suggest-page form fieldset {
+    height: 750px;
     display: flex;
-    justify-content: space-evenly;
+    align-items: center;
     margin: 0 2rem 0 2rem;
     padding: 3rem;
     background-image: url(https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixlib=rb-4.0.3);
     background-size: cover;
-    color: black;
 }
 
-#suggest-form {
+button#suggest-form {
     background-color: #EDEEE9;
     color: black;
     cursor: pointer;
     margin-top: 10px;
     font-size: 20px;
     font-weight: bold;
-    width: 10%;
+    border-radius: 10px;
+    width: 90px;
 }
 
-#suggest-form:hover {
-    background-color: #edeee9c4;
+button#suggest-form:hover {
+    background-color: var(--yellow-swars);
 }
 
+img {
+   margin-left: 1rem;
+}
 
+/*#endregion*/
+
+/*#region Puntation --------------------------------------------------------------------------------*/
 .star-container {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    justify-content: center;
+    width: 400px;
+    gap: 20px;
 }
 
 .star{
@@ -168,6 +190,7 @@ form#suggests{
     background-size: cover;
     background-repeat: no-repeat;
     cursor: pointer;
+    margin: 5px;
 }
 
 .empty-star{
@@ -179,7 +202,9 @@ form#suggests{
 
 }
 
-/* THANKS*/
+/*#endregion*/
+
+/*#region End message ------------------------------------------------------------------------------*/
 #thanks {
     display: flex;
     justify-content: center
@@ -194,6 +219,8 @@ div#form-posted {
     width: 70%;
     height: 30rem;
 }
+
+/*#endregion*/
 
 @media only screen and (max-width: 1000px) {
 
@@ -216,6 +243,13 @@ div#form-posted {
 
     #suggest-form {
         width: 50%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #questions-suggest textarea {
+        width: 400px;
+        height: 200px;
     }
 }
 
