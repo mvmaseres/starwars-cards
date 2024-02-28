@@ -34,7 +34,7 @@ main {
     font-size: 1.5rem;
 }
 
-/* HEADER */
+/*#region Header ------------------------------------------------------------------------------- */
 
 .header {
     display: flex;
@@ -95,6 +95,8 @@ main {
     color: var(--yellow-swars);
     font-size: 1.80rem;
 }
+
+/*#endregion */
 
                         /*FOOTER*/
 .footer{

@@ -29,9 +29,8 @@ main {
     font-size: 1.5rem;
 }
 
-           /* HOME, HEADER AND FOOTER */
-                /* HEADER */
-                /* LOGO */
+ /*#region Header ------------------------------------------------------------------------------- */
+
 .header {
     display: flex;
     justify-content: center;
@@ -91,6 +90,9 @@ main {
     color: var(--yellow-swars);
     font-size: 1.80rem;
 }
+
+/*#endregion */
+
 
                         /* MAIN */
                         /* VIDEO HEADER */

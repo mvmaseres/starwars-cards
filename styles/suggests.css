@@ -1,15 +1,6 @@
 /* Google Fonts - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-/* Color pallete: 
-
-Tricorn black: #2C2B2C
-Extra white: #EDEEE9
-Rookwood dark: #492728
-Bitter chocolate: #50433f
-Denim:#6F8FAF
-
-*/
 :root {
     --grey-swars: #2C2B2C;
     --darkgrey-swars: #333;
@@ -33,7 +24,7 @@ main {
     font-size: 1.5rem;
 }
 
-/* HEADER */
+/*#region Header ------------------------------------------------------------------------------- */
 
 .header {
     display: flex;
@@ -94,6 +85,9 @@ main {
     color: var(--yellow-swars);
     font-size: 1.80rem;
 }
+
+/*#endregion */
+
 
                         /*FOOTER*/
 .footer{
