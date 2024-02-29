@@ -1,11 +1,6 @@
 /* Google Fonts - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-/* Color pallete: 
-
-Denim:#6F8FAF
-*/
-
 :root {
     --grey-swars: #2C2B2C;
     --darkgrey-swars: #333;
@@ -93,12 +88,24 @@ main {
 
 /*#endregion */
 
+/*#region Footer ------------------------------------------------------------------------------- */
 
+.footer{
+    margin-top: 2rem;
+    background-color: var(--darkgrey-swars); 
+    padding: 10px;
+    text-align: center;
+    font-size: 14px; 
+}
+
+/*#endregion*/
+
+/*#region Video Header ---------------------------------------------------------------------------- */
                         /* MAIN */
                         /* VIDEO HEADER */
 #video-header {
     position: relative;
-    padding-bottom: 40%; /* Proportion 16:9 */
+    padding-bottom: 40%;
   }
 
   #video-header iframe {
@@ -109,7 +116,10 @@ main {
     height: 100%;
   }
 
-                        /* SECTIONS HEADER */
+  /*#endregion*/
+
+/*#region Home divs ------------------------------------------------------------------------------- */
+                      /* SECTIONS HEADER */
                         /* PARENT */
 .home-divs {
     margin: 1.5rem;
@@ -131,6 +141,12 @@ main {
 }
 
                         /* TEXTS */
+                        
+.explication-divs h1 {
+    margin-bottom: 0.5rem;
+    color: #d4c117;
+}
+
 .explication-divs {
     width: 50%;
     display: flex;
@@ -143,6 +159,9 @@ main {
     border-radius: 35px;
 }
 
+/*#endregion*/
+
+/*#region Transitions ------------------------------------------------------------------------------- */
 /* Transition texts */
 .toRight {
     opacity: 0;
@@ -169,10 +188,11 @@ main {
     filter: blur(0);
     transform: translateX(0);
 }
+/*#endregion*/
 
-
+/*#region Buttons ------------------------------------------------------------------------------- */
 .explication-divs button {
-    width: 13rem;
+    width: 16rem;
     height: 2.5rem;
     background-color: var(--extrawhite);
     color: var(--grey-swars);
@@ -188,19 +208,8 @@ main {
     cursor: pointer;
 }
 
-.explication-divs h1 {
-    margin-bottom: 0.5rem;
-    color: #d4c117;
-}
+/*#endregion*/
 
-                        /*FOOTER*/
-.footer{
-    margin-top: 2rem;
-    background-color: var(--darkgrey-swars); 
-    padding: 10px;
-    text-align: center;
-    font-size: 14px; 
-}
 
 @media only screen and (max-width: 1000px) {
 
@@ -223,6 +232,16 @@ main {
     .img-divs,
     .explication-divs {
         width: 100%;
+    }
+
+
+    div.explication-divs h1 {
+        font-size: 1.5rem;
+    }
+
+    div.explication-divs p,
+    div.explication-divs button {
+        font-size: 1rem;
     }
 }
 
