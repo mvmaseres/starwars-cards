@@ -5,6 +5,7 @@ export let gameWon = false
 
 const userInput = document.getElementById('userInput')
 const imgSolution = document.querySelector('#answer .unknown')
+const labelInput = document.querySelector('#answer label')
 
 //spanTime
 const spanTime = document.querySelector('span.time')
@@ -15,6 +16,10 @@ export function lostGame() {
     spanTime.classList.add('timeOut')
     userInput.classList.add('wrongAnswer')
     imgSolution.classList.add('wrongAnswer')
+
+    userInput.value = localStorage.getItem("solution")
+    labelInput.textContent = 'The right answer is'
+
 
     gameLost = true
 
