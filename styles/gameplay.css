@@ -1,32 +1,25 @@
 /* Google Fonts - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-/* Color pallete: 
 
-Tricorn black: #2C2B2C
-Extra white: #EDEEE9
-Rookwood dark: #492728
-Bitter chocolate: #50433f
-Denim:#6F8FAF
-
-*/
 :root {
     --grey-swars: #2C2B2C;
     --darkgrey-swars: #333;
     --extrawhite: #EDEEE9;
     --yellow-swars: #dcc91d;
+    --denim-blue: #6F8FAF;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #EDEEE9;
+    color: var(--extrawhite);
     font-family: 'Poppins', sans-serif;
 }
 
 html {
-    background-color: #2C2B2C;
+    background-color: var(--grey-swars);
 }
 
 main {
@@ -97,16 +90,19 @@ main {
 
 /*#endregion */
 
-                        /*FOOTER*/
+/*#region Footer ------------------------------------------------------------------------------- */
+
 .footer{
     margin-top: 2rem;
-    background-color: #333; 
+    background-color: var(--darkgrey-swars); 
     padding: 10px;
     text-align: center;
     font-size: 14px; 
 }
+
+/*#endregion*/
  
-/*GUESSING GAME*/
+/*#region General ------------------------------------------------------------------------------- */
 
 h1 {
     padding-left: 1rem;
@@ -114,45 +110,57 @@ h1 {
 }
 
 #table-game {
-    display: flex;
     flex-direction: column;
     margin: 1rem;
     padding: 1.5rem;
     border: 2px solid black;
-    background-color: #333;
+    background-color: var(--darkgrey-swars);
 }
 
 strong, label {
-    color: #dcc91d;
+    color: var(--yellow-swars);
 }
 
 p,
 span,
 div {
-    color: #EDEEE9;
+    color: var(--extrawhite);
 }
 
 #gameplay {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-#info-to-play,
-#game-clues{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10rem;
-    margin-top: 2rem;
-}
+/*#endregion*/
+
+/*#region Clues block ------------------------------------------------------------------------------- */
 
 #game-clues {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
     width: 250px; 
     word-wrap: break-word;
     align-items: center;
+    margin-left: 1.5rem;
 }
 
 #game-clues ul {
     margin-top: 0.5rem;
+}
+
+/*#endregion*/
+
+/*#region Time and attempts block ------------------------------------------------------------------- */
+
+#info-to-play{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 
 section#tries {
@@ -169,11 +177,11 @@ section#tries #attempts {
     height: 6rem;
     padding: 2rem;
     margin: 0.5rem;
-    background-color: #dcc91d;
-    border: 1px solid #EDEEE9;
+    background-color: var(--yellow-swars);
+    border: 1px solid var(--extrawhite);
     border-radius: 50px;
     font-weight: bold;
-    color: #333;
+    color: var(--darkgrey-swars);
     font-size: 2rem;
 }
 
@@ -182,6 +190,15 @@ section#tries #attempts {
     margin-bottom: 1rem;
 }
 
+.timeOut {
+    color: rgb(217, 62, 62);
+    font-weight: bold;
+}
+
+/*#endregion*/
+
+/*#region Card and answer block ------------------------------------------------------------------- */
+
 #answer {
     display: flex;
     flex-direction: column;
@@ -189,11 +206,11 @@ section#tries #attempts {
 }
 
 #answer .unknown{
-    width: 25vh;
-    height: 30vh;
+    width: 320px;
+    height: 385px;
     border: 3px solid black;
     border-radius: 10px;
-    background-color: #2C2B2C;
+    background-color: var(--grey-swars);
     display: flex;
     justify-content: center;
     position: relative;
@@ -216,20 +233,7 @@ section#tries #attempts {
     animation: gradientAnimation 5s linear infinite;
   }
 
-  
-  @keyframes gradientAnimation {
-    0% {
-        background-color: #edeee900;
-    }
-    50% {
-        background-color: #fdfdfd3d;
-    }
-    100% {
-        background-color: #edeee900;
-    }
-  }
-
-#answer label {
+  #answer label {
     margin-top: 1rem;
 }
 
@@ -241,14 +245,33 @@ section#tries #attempts {
     font-size: 1rem;
 }
 
+@keyframes gradientAnimation {
+    0% {
+        background-color: #edeee900;
+    }
+    50% {
+        background-color: #fdfdfd3d;
+    }
+    100% {
+        background-color: #edeee900;
+    }
+  }
+
+/*#endregion*/
+  
+/*#region Buttons --------------------------------------------------------------------------------- */
+
 button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 120px;
     height: 48px;
-    color: #dcc91d;
+    color: var(--yellow-swars);
     font-weight: bold;
     font-size: 1.25rem;
-    background-color: #6F8FAF;
-    border: 1px solid #EDEEE9;
+    background-color: var(--denim-blue);
+    border: 1px solid var(--extrawhite);
     border-radius: 25px;
     padding: 0.5rem;
     cursor: pointer;
@@ -276,12 +299,9 @@ button:disabled {
     cursor: not-allowed;
 }
 
-.timeOut {
-    color: rgb(217, 62, 62);
-    font-weight: bold;
-}
+/*#endregion*/
 
-
+/*#region Message popup ---------------------------------------------------------------------------- */
 .popup {
     display: none;
     position: fixed;
@@ -290,7 +310,7 @@ button:disabled {
     transform: translate(-50%, -70%);
     width: 35rem;
     padding: 20px;
-    background-color: #333;
+    background-color: var(--darkgrey-swars);
     border: 4px solid black;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 9999;
@@ -316,6 +336,8 @@ button:disabled {
     color: rgb(217, 62, 62);
 }
 
+/*#endregion*/
+
 @media only screen and (max-width: 1000px) {
 
     .header {
@@ -328,5 +350,69 @@ button:disabled {
 
     div.logo {
         display: none;
+    }
+
+    .footer p{
+        font-size: 0.8rem; 
+    }
+
+    h1 {
+       font-size: 1.75rem;
+    }
+
+    p,
+    span,
+    label,
+    button,
+    li {
+        font-size: 1rem;
+    }
+
+    section#tries #attempts {
+        font-size: 1rem;
+        width: 2rem;
+        height: 2rem;
+        padding: 1.5rem;
+    }
+    
+    #answer .unknown{
+        width: 220px;
+        height: 285px;
+    }
+
+    #answer input {
+        width: 90%;
+    }
+
+    button {
+        width: 90px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    button#get-clues {
+        width: 160px;
+    }
+
+    .popup {
+        width: 15rem;
+    }
+    
+    .popup h2 {
+        font-size: 1.2rem;
+    }
+
+}
+
+@media only screen and (max-width: 750px) {
+    #gameplay {
+        flex-direction: column; 
+        align-items: center; 
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    #game-clues {
+        width: 600px; 
     }
 }
