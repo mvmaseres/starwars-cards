@@ -1,15 +1,6 @@
 /* Google Fonts - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-/* Color pallete: 
-
-Tricorn black: #2C2B2C
-Extra white: #EDEEE9
-Rookwood dark: #492728
-Bitter chocolate: #50433f
-Denim:#6F8FAF
-
-*/
 :root {
     --grey-swars: #2C2B2C;
     --darkgrey-swars: #333;
@@ -21,12 +12,12 @@ Denim:#6F8FAF
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #EDEEE9;
+    color: var(--extrawhite);
     font-family: 'Poppins', sans-serif;
 }
 
 html {
-    background-color: #2C2B2C;
+    background-color: var(--grey-swars);
 }
 
 main {
@@ -98,18 +89,17 @@ main {
 /*#endregion */
 
 
-                        /*FOOTER*/
+/*#region Footer ------------------------------------------------------------------------------- */
 .footer{
     margin-top: 2rem;
-    background-color: #333; 
+    background-color: var(--darkgrey-swars); 
     padding: 10px;
     text-align: center;
     font-size: 14px; 
 }
- 
+/*#endregion*/ 
 
- /* GAME */
-                        /*TEXT*/
+/*#region General ------------------------------------------------------------------------------- */
 
 #title-game,
 #choose-category h2,
@@ -134,8 +124,10 @@ main {
     text-align: justify;
 }
 
- 
-                        /* ACCORDION STYLES */
+/*#endregion*/
+
+/*#region Accordion ----------------------------------------------------------------------------- */
+
 #category-accordion {
     margin: 1.2em auto;
     width: 90%;
@@ -146,7 +138,6 @@ main {
     flex-direction: row; 
     width: 100%; 
     justify-content: center;
-    overflow: hidden;
 }
 
 #category-accordion li {
@@ -162,6 +153,19 @@ main {
     border-width: 1px;
     transition: width 1s;
 }
+
+#category-accordion li label {
+    font-size: 18px;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+}
+
+#category-accordion input[type="radio"] {
+    display: none;
+}
+
+/*#region Background Image ------------------------------------------------------------------------------- */
 
 #Film{
     background-image: url(https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/81A736C2B6CC7B7B4A3F2E2381E36542715DFC550F765F49BC0770898DE5F32B/scale?width=1200&aspectRatio=1.78&format=jpeg);
@@ -205,55 +209,27 @@ main {
     position: relative;
 }
 
-#category-accordion li label {
-    font-size: 18px;
-    font-weight: bolder;
-    color: white;
-    cursor: pointer;
-}
+/*#endregion*/
 
-#category-accordion input[type="radio"] {
-    display: none;
-}
 
-                        /* CHOOSE DIFFICULTY */
 
-#category-difficulty input[type="radio"] {
-    display: none;
-}
+/*#endregion*/
 
-#Begginer {
-    background-image: url(https://i.pinimg.com/originals/cc/19/82/cc19825a05d7aca4c4c10e3c4947b509.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-}
-
-#Intermediate {
-    background-image: url(https://medialab.news/wp-content/uploads/2022/06/anakin.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-}
-
-#Expert {
-    background-image: url(https://lafrikileria.com/blog/wp-content/uploads/2023/05/villanos-star-wars.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-}
+/*#region Choose difficulty ----------------------------------------------------------------------- */
 
 #category-difficulty {
     margin: 1.2em auto;
     width: 90%;
 }
 
+#category-difficulty input[type="radio"] {
+    display: none;
+}
+
 #category-difficulty ul{
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    overflow: hidden;
 }
 
 #category-difficulty li {
@@ -276,7 +252,29 @@ main {
     cursor: pointer;
 }
 
-                        /* BUTTON TO GAME-PLAY */
+#Begginer {
+    background-image: url(https://i.pinimg.com/originals/cc/19/82/cc19825a05d7aca4c4c10e3c4947b509.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#Intermediate {
+    background-image: url(https://medialab.news/wp-content/uploads/2022/06/anakin.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#Expert {
+    background-image: url(https://lafrikileria.com/blog/wp-content/uploads/2023/05/villanos-star-wars.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/*#endregion*/
+
+/*#region Button ---------------------------------------------------------------------------------- */
+
 .button-gameplay{
     display: flex;
     justify-content: center;
@@ -290,17 +288,20 @@ main {
     color: black;
     font-size: 1.5rem;
     font-weight: bold;
-    background-color: #EDEEE9;
-    border: 1px solid #EDEEE9;
+    background-color: var(--extrawhite);
+    border: 1px solid var(--extrawhite);
     border-radius: 1rem;
     cursor: pointer;
 }
 
 #gameplay-button:hover{
-    background-color: #edeee9b1;
-    border: #edeee9b1;
+    background-color: var(--yellow-swars);
+    border: var(--extrawhite);
 }
 
+/*#endregion*/
+
+/*#region Red Messages ---------------------------------------------------------------------------- */
 .hide {
     display: none;
 }
@@ -315,35 +316,7 @@ main {
     font-weight: bold;
 }
 
-.popup {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 9999;
-}
-
-.popup-content {
-    position: relative;
-}
-
-.close-btn {
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.close-btn:hover {
-    color: red;
-}
+/*#endregion*/
 
 @media only screen and (max-width: 1000px) {
 
@@ -358,4 +331,35 @@ main {
     div.logo {
         display: none;
     }
+
+    h1{
+        font-size: 2rem;
+    }
+
+    #choose-category h2,
+    .choose-difficulty h2 {
+        font-size: 1.5rem;
+    }
+
+    #game-rules p {
+        font-size: 1.2rem;
+    }
+
+    #Film, #Character, #Planet, #Specie, #Starship, #Vehicle {
+        flex: 1;
+    }
+
+    #category-accordion li label {
+        font-size: 16px;
+    }
+
+    #category-difficulty li label {
+        font-size: 16px;
+    }
+
+    #gameplay-button{
+        width: 150px;
+        font-size: 1rem;
+    }
+    
 }
