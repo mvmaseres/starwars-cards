@@ -149,6 +149,7 @@ export function blockInputSubmitBtns() {
 
 export function checkAnswer() {
     btnSubmit.addEventListener('click', () => {
+        //change all the text to lowerCase
         const category = selectedCategory.toLowerCase()
 
         const url = photosGame[category]
@@ -167,6 +168,7 @@ export function checkAnswer() {
                 attempts.textContent = attempts.textContent - 1
                 wrongAnswer()
             } else {
+                theImg.src = url
                 lostGame()
             }
         }

@@ -245,6 +245,14 @@ section#tries #attempts {
     font-size: 1rem;
 }
 
+.wrongAnswer {
+    border: 3px solid rgb(217, 62, 62) !important;
+}
+
+.rightAnswer {
+    border: 3px solid green !important;
+}
+
 @keyframes gradientAnimation {
     0% {
         background-color: #edeee900;
