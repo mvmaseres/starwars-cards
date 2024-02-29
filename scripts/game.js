@@ -10,6 +10,7 @@ if(localStorage.getItem("logged") === "true") {
 /* GAME - SCREEN */
 clickOnDifficulty()
 clickOnCategory()
+NavegationtoGamePlayScreen()
 
                             /* GAME SCREEN */
 
