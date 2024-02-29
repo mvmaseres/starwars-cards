@@ -21,12 +21,12 @@ function passwordEye() {
                 //if the field is in mode password show the text
                 if(password.type === "password") {
                     password.type = "text"
-                    eyeIcon.classList.replace("bx-hidde", "bx-show")
+                    eyeIcon.classList.replace("bx-hide", "bx-show")
                     return
                 }
                 //if it is not selected, change to password mode
                 password.type = "password"
-                eyeIcon.classList.replace("bx-show", "bx-hidde")
+                eyeIcon.classList.replace("bx-show", "bx-hide")
             })
         })
     })
