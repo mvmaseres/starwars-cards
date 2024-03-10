@@ -32,7 +32,7 @@ We are using the Star Wars API, also known as "swapi" (Swah-pee), which is a pub
 **What is this?
 The Star Wars API is the first quantified and programmatically accessible data source for all data in the canonical Star Wars universe. It provides information about characters, planets, movies, races and spaceships in the Star Wars universe. We have leveraged this API to give players a wide range of options for guessing and exploring in our card game.
 
-For more details on how to interact with the API and the data available, we recommend you visit https://swapi.dev/ 
+For more details on how to interact with the API and the data available, we recommend you visit https://swapi.tech/ 
 
 ## Author
 
