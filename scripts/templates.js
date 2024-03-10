@@ -1,5 +1,5 @@
 export async function addHeaderAndFooter() {
-    const response = await fetch('templates.html')
+    const response = await fetch('../html/templates.html')
 
     if (!response.ok) {
         console.log('Error fetching header and footer')
@@ -19,7 +19,7 @@ export async function addHeaderAndFooter() {
 }
 
 export async function addHeaderAndFooterLogout() {
-    const response = await fetch('templates.html')
+    const response = await fetch('../html/templates.html')
 
     if (!response.ok) {
         console.log('Error fetching header and footer')
