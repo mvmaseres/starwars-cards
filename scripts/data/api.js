@@ -1,5 +1,5 @@
 /* Bring the API */
-export const apiUrl = 'https://swapi.dev/api/'
+export const apiUrl = 'https://swapi.tech/api/'
 export const filmsUrl = 'films/'
 export const peopleUrl = 'people/'
 export const planetsUrl = 'planets/'
