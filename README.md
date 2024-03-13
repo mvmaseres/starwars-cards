@@ -1,4 +1,4 @@
-# [StarWars -   Guessing Game](https://mvmaseres.github.io/starwars-cards/home.html)
+# [StarWars -   Guessing Game](https://main--starwars-vm.netlify.app/)
 
 ##  Description
 Welcome to our StarWars card game, where players can dive into the exciting Star Wars universe and test their knowledge. 
