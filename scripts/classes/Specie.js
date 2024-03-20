@@ -10,7 +10,5 @@ export default class Species {
         this.average_lifespan = `Lifespan: ${data.average_lifespan}`
         this.homeworld = `This species comes from ${data.homeworld}`
         this.language = `The language that they speak is ${data.language}`
-        this.people = Array.isArray(data.people) ? data.people.map(character => `${character} is of this specie `) : []
-        this.films = Array.isArray(data.films) ? data.films.map(film => `This specie appears in the film ${film}`) : []
     }
 }

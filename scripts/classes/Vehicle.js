@@ -9,7 +9,5 @@ export default class Vehicle {
         this.passengers = `Passengers capacity: ${data.passengers}`
         this.cargo_capacity = `The cargo capacity is ${data.cargo_capacity}`
         this.vehicle_class = `Vehicle class: ${data.vehicle_class}`
-        this.pilots = Array.isArray(data.pilots) ? data.pilots.map(pilot => `${pilot} drives this vehicle`) : []
-        this.films = Array.isArray(data.films) ? data.films.map(film => `This vehicle appears in the film ${film}`) : []
     }
 }

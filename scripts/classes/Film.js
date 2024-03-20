@@ -1,5 +1,6 @@
 export default class Film {
     constructor(data) {
+        console.log(data)
         this.title = `The title was ${data.title}`
         this.episode_id = `Episode ${data.episode_id}`
         this.opening_crawl = data.opening_crawl

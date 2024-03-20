@@ -11,7 +11,7 @@ export const vechiclesUrl = 'vehicles/'
 export async function fetchApi(apiType) {
     const response = await fetch(apiUrl + apiType)
     const data = await response.json()
-    return data.results
+    return data.results || data.result
 }
 
 export async function regularFetch(link) {

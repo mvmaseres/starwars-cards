@@ -9,7 +9,5 @@ export default class Starship {
         this.passengers = `Passengers capacity: ${data.passengers}`
         this.cargo_capacity = `The cargo capacity is ${data.cargo_capacity}`
         this.starship_class = `Starship class: ${data.starship_class}`
-        this.pilots = Array.isArray(data.pilots) ? data.pilots.map(pilot => `${pilot} drives this starships`) : []
-        this.films = Array.isArray(data.films) ? data.films.map(film => `This starship appears in the film ${film}`) : []
     }
 }
