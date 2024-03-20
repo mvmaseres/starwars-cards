@@ -1,6 +1,5 @@
 export default class Planet {
     constructor(data) {
-        console.log(data);
         this.name = `The planet was ${data.name}`
         this.rotation_period = `The rotation period is ${data.rotation_period}`
         this.orbital_period = `The orbital period is ${data.orbital_period}`
