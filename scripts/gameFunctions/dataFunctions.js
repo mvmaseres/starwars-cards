@@ -30,32 +30,33 @@ export async function selectRandomElement() {
 
     switch (selectedCategory) {
         case 'Film':
-            randomElem = new Film(randomElement(storedCategory));
+            randomElem = new Film(await randomElement(storedCategory));
             break;
         case 'Character':
-            randomElem = new People(randomElement(storedCategory));
+            randomElem = new People(await randomElement(storedCategory));
             break;
         case 'Planet':
-            randomElem = new Planet(randomElement(storedCategory));
+            randomElem = new Planet(await randomElement(storedCategory));
             break;
         case 'Specie':
-            randomElem = new Specie(randomElement(storedCategory));
+            randomElem = new Specie(await randomElement(storedCategory));
             break;
         case 'Starship':
-            randomElem = new Starship(randomElement(storedCategory));
+            randomElem = new Starship(await randomElement(storedCategory));
             break;
         case 'Vehicle':
-            randomElem = new Vehicle(randomElement(storedCategory));
+            randomElem = new Vehicle(await randomElement(storedCategory));
             break;
     }
-
     return randomElem;
 }
 
 //elemento random de la array de objetos
-function randomElement(type) {
+async function randomElement(type) {
     let randomIndex = Math.floor(Math.random() * type.length)
-    return type[randomIndex]
+    let randomElementToGuess = await regularFetch(type[randomIndex].url)
+    console.log(randomElementToGuess.result.properties)
+    return randomElementToGuess.result.properties
 }
 
 //elemento random, excepto el titulo o el name del array
@@ -101,16 +102,6 @@ async function obtainClue(elem) {
     } else {
         if (randomValue.length > 200) {
             return randomValue.substring(0, 50) + '...';
-
-        } else if (randomValue.includes('https://')) {
-            const extractUrl = randomValue.split(' ').find(element => element.startsWith('https://'))
-            const newElem = await regularFetch(extractUrl)
-            const values = Object.values(newElem)
-            const firstValue = values[0]
-
-            // update sentence
-            const updatedElem = randomValue.replace(/https:\/\/\S+/, firstValue)
-            return updatedElem
         } else {
             return randomValue
         }
