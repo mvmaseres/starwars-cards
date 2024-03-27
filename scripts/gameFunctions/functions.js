@@ -2,6 +2,7 @@ import {showClues, selectRandomElement} from "./dataFunctions.js"
 import {lostGame, wrongAnswer, wonGame, gameLost, gameWon } from "./advices.js"
 import { photosGame } from '../data/photos.js'
 import {storageWonCards} from '../CollectionLoginFunctions/loginFunctions.js'
+import {stringSimilarity} from './levenshtein.js'
 
 
 const selectedCategory = localStorage.getItem('selectedCategory')
@@ -160,6 +161,14 @@ export function checkAnswer() {
         if (input.value.toLowerCase() === localStorage.getItem("solution").toLowerCase()) {
             wonGame()
             theImg.src = url
+
+            localStorage.getItem("logged") && storageWonCards()
+
+        } else if (stringSimilarity(input.value, localStorage.getItem("solution")) >= 70) { 
+            wonGame()
+            theImg.src = url
+
+            input.value = localStorage.getItem("solution")
 
             localStorage.getItem("logged") && storageWonCards()
 
